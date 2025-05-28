@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="2c9c4153-be1f-49a7-a084-59e6d885201b"
+    ></script>
+    <link rel="stylesheet" href="main.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['Montserrat', 'sans-serif'],
+                },
+                extend: {
+                    spacing: {
+                        '45': '11.25rem',
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        darkest: '#000000',
+                        blood: '#ff0000',
+                        bloodlight: '#ff3333',
+                        blooddark: '#cc0000',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans px-[15px] bg-dark text-gray-200">
+    <!-- Hero Section -->
+    <section class="py-20 bg-darker">
+        <div class="container mx-auto">
+            <h1 class="text-5xl md:text-7xl font-[900] text-center mb-20 text-blood">DISCOVER THE WORLD OF <span class="text-bloodlight">APPLES</span></h1>
+            
+            <div class="flex overflow-x-auto gap-10 pb-10 scrollbar-hide">
+                <!-- Feature Cards -->
+                <div class="flex-shrink-0 w-64 bg-darkest rounded-xl shadow-lg p-[30px] px-[10px] border border-blooddark">
+                    <div class="text-4xl text-blood mb-5 text-center"><i class="fas fa-apple-alt"></i></div>
+                    <h3 class="font-[800] text-xl mb-3 text-center text-bloodlight">Nutritious</h3>
+                    <p class="font-[600] text-gray-300 text-center">Packed with fiber and vitamin C</p>
+                </div>
+                
+                <div class="flex-shrink-0 w-64 bg-darkest rounded-xl shadow-lg p-[30px] px-[10px] border border-blooddark">
+                    <div class="text-4xl text-blood mb-5 text-center"><i class="fas fa-seedling"></i></div>
+                    <h3 class="font-[800] text-xl mb-3 text-center text-bloodlight">Varieties</h3>
+                    <p class="font-[600] text-gray-300 text-center">Over 7,500 cultivars worldwide</p>
+                </div>
+                
+                <div class="flex-shrink-0 w-64 bg-darkest rounded-xl shadow-lg p-[30px] px-[10px] border border-blooddark">
+                    <div class="text-4xl text-blood mb-5 text-center"><i class="fas fa-heart"></i></div>
+                    <h3 class="font-[800] text-xl mb-3 text-center text-bloodlight">Healthy</h3>
+                    <p class="font-[600] text-gray-300 text-center">May reduce risk of chronic diseases</p>
+                </div>
+                
+                <div class="flex-shrink-0 w-64 bg-darkest rounded-xl shadow-lg p-[30px] px-[10px] border border-blooddark">
+                    <div class="text-4xl text-blood mb-5 text-center"><i class="fas fa-utensils"></i></div>
+                    <h3 class="font-[800] text-xl mb-3 text-center text-bloodlight">Versatile</h3>
+                    <p class="font-[600] text-gray-300 text-center">Perfect for sweet and savory dishes</p>
+                </div>
+                
+                <div class="flex-shrink-0 w-64 bg-darkest rounded-xl shadow-lg p-[30px] px-[10px] border border-blooddark">
+                    <div class="text-4xl text-blood mb-5 text-center"><i class="fas fa-globe-americas"></i></div>
+                    <h3 class="font-[800] text-xl mb-3 text-center text-bloodlight">Global</h3>
+                    <p class="font-[600] text-gray-300 text-center">Grown in temperate climates worldwide</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-[45px]">
+                <a href="https://www.amazon.com/s?k=apples" class="bg-blood hover:bg-blooddark text-white font-[800] py-4 px-8 rounded-full text-lg inline-block transition duration-300">
+                    <i class="fas fa-shopping-basket mr-2"></i> Shop Apples on Amazon
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits Section -->
+    <section class="py-[45px] bg-darkest">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-[800] text-center mb-16 text-blood">HEALTH BENEFITS OF APPLES</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-darker p-[30px] md:p-[50px] px-[10px] md:px-[30px] rounded-xl shadow-md border border-blooddark">
+                    <h3 class="font-[800] text-xl mb-3 text-bloodlight">Heart Health</h3>
+                    <p class="font-[600] text-gray-300">Apples contain soluble fiber which can help lower blood cholesterol levels. The polyphenols in apples are linked to lower blood pressure.</p>
+                </div>
+                
+                <div class="bg-darker p-[30px] md:p-[50px] px-[10px] md:px-[30px] rounded-xl shadow-md border border-blooddark">
+                    <h3 class="font-[800] text-xl mb-3 text-bloodlight">Gut Health</h3>
+                    <p class="font-[600] text-gray-300">Apples contain pectin, a type of fiber that acts as a prebiotic, feeding the good bacteria in your gut for improved digestion.</p>
+                </div>
+                
+                <div class="bg-darker p-[30px] md:p-[50px] px-[10px] md:px-[30px] rounded-xl shadow-md border border-blooddark">
+                    <h3 class="font-[800] text-xl mb-3 text-bloodlight">Weight Management</h3>
+                    <p class="font-[600] text-gray-300">The fiber and water content in apples helps you feel full. Studies show eating apples can reduce calorie intake and support weight loss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Apples Section -->
+    <section class="py-[45px] bg-darker">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-[800] text-center mb-16 text-blood">POPULAR APPLE VARIETIES</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-darkest rounded-xl overflow-hidden shadow-lg border border-blooddark">
+                    <img src="https://picsum.photos/seed/fuji/600/400" alt="Fuji Apple" class="w-full h-64 object-cover grayscale hover:grayscale-0 transition duration-500">
+                    <div class="p-[30px] md:p-[50px] px-[10px] md:px-[30px]">
+                        <h3 class="font-[800] text-xl mb-3 text-bloodlight">Fuji</h3>
+                        <p class="font-[600] text-gray-300 mb-4">Sweet, crisp and juicy with a honey-like flavor. Perfect for eating fresh.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-darkest rounded-xl overflow-hidden shadow-lg border border-blooddark">
+                    <img src="https://picsum.photos/seed/granny/600/400" alt="Granny Smith Apple" class="w-full h-64 object-cover grayscale hover:grayscale-0 transition duration-500">
+                    <div class="p-[30px] md:p-[50px] px-[10px] md:px-[30px]">
+                        <h3 class="font-[800] text-xl mb-3 text-bloodlight">Granny Smith</h3>
+                        <p class="font-[600] text-gray-300 mb-4">Tart, crisp and bright green. Excellent for baking and salads.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-darkest rounded-xl overflow-hidden shadow-lg border border-blooddark">
+                    <img src="https://picsum.photos/seed/honeycrisp/600/400" alt="Honeycrisp Apple" class="w-full h-64 object-cover grayscale hover:grayscale-0 transition duration-500">
+                    <div class="p-[30px] md:p-[50px] px-[10px] md:px-[30px]">
+                        <h3 class="font-[800] text-xl mb-3 text-bloodlight">Honeycrisp</h3>
+                        <p class="font-[600] text-gray-300 mb-4">Exceptionally crisp with balanced sweet-tart flavor. Great for snacking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews and CTA Section -->
+    <section class="py-[45px] bg-darkest">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-[800] text-center mb-16 text-blood">WHAT PEOPLE SAY ABOUT APPLES</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10 mb-[45px]">
+                <div class="bg-darker p-[30px] md:p-[50px] px-[10px] md:px-[36px] rounded-xl shadow-md border border-blooddark">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="font-[800] text-bloodlight">Sarah J.</span>
+                    </div>
+                    <p class="font-[600] text-gray-300 italic">"An apple a day truly keeps the doctor away! I've never felt better since making apples my daily snack. The variety of flavors means I never get bored."</p>
+                </div>
+                
+                <div class="bg-darker p-[30px] md:p-[50px] px-[10px] md:px-[36px] rounded-xl shadow-md border border-blooddark">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="font-[800] text-bloodlight">Michael T.</span>
+                    </div>
+                    <p class="font-[600] text-gray-300 italic">"As a chef, apples are my secret weapon. Their versatility in both sweet and savory dishes is unmatched. Honeycrisp is my current favorite!"</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <h3 class="text-3xl font-[800] mb-6 text-bloodlight">READY TO ENJOY NATURE'S PERFECT SNACK?</h3>
+                <a href="https://www.amazon.com/s?k=apples" class="bg-blood hover:bg-blooddark text-white font-[800] py-4 px-8 rounded-full text-lg inline-block transition duration-300">
+                    <i class="fas fa-apple-alt mr-2"></i> Buy Fresh Apples Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-18 bg-darkest border-t border-blooddark">
+        <div class="container mx-auto">
+            <p class="font-[600] text-gray-400 text-center">&copy; 2025 Apple-Practice. All rights reserved.</p>
+            <div class="flex flex-wrap justify-center space-x-4 mt-8 text-2xl">
+                <a href="#" class="text-gray-400 hover:text-blood"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blood"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blood"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blood"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
