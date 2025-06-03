@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival Services: Your Digital 'A-Ha!' Moment</title>
+    <meta name="description" content="Bots, websites, logos – we make your digital life less 'argh!' and more 'OMG, that's awesome!' Partner with us for innovative digital solutions.">
+    <meta name="keywords" content="digital services, web development, bot creation, logo design, Carnival Services">
+
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Carnival Services: Your Digital 'A-Ha!' Moment">
+    <meta property="og:description" content="Bots, websites, logos – we make your digital life less 'argh!' and more 'OMG, that's awesome!' Partner with us for innovative digital solutions.">
+    <meta property="og:image" content="https://example.com/images/social-preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['Space Grotesk', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        orange: {
+                            50: '#FFF3E6',
+                            100: '#FFE3C2',
+                            200: '#FFD099',
+                            300: '#FFB266',
+                            400: '#FF9933',
+                            500: '#FF8000',
+                            600: '#E67300',
+                            700: '#B35A00',
+                            800: '#804000',
+                            900: '#4D2600',
+                            950: '#331A00',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hamburger-line {
+            @apply w-6 h-0.5 my-1.5 block bg-orange-900 transition ease transform duration-300;
+        }
+    </style>
+</head>
+<body x-data="{ open: false }" class="font-sans bg-orange-50 text-orange-950">
+    <!-- Header with mobile nav -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://example.com" class="flex items-center gap-2">
+                <i class="fas fa-bomb text-3xl text-orange-500"></i>
+                <span class="text-2xl font-bold text-orange-900">Carnival Services</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-8">
+                <a href="https://example.com/about-us" class="font-medium hover:text-orange-500 transition">About Us</a>
+                <a href="https://example.com/dashboard" class="font-medium hover:text-orange-500 transition">Dashboard</a>
+                <a href="https://example.com/careers" class="font-medium hover:text-orange-500 transition">Careers</a>
+                <a href="https://example.com/dispute-a-verdict" class="font-medium hover:text-orange-500 transition">Dispute a Verdict</a>
+            </nav>
+            
+            <!-- Mobile Nav Button -->
+            <button @click="open = !open" class="md:hidden focus:outline-none">
+                                        <i class="fas fa-bars text-3xl text-orange-400"></i>
+
+            </button>
+        </div>
+        
+        <!-- Mobile Nav Menu -->
+        <div x-show="open" x-collapse class="md:hidden">
+            <div class="px-4 pb-4 space-y-3">
+                <a href="https://example.com/about-us" class="block py-2 font-medium hover:text-orange-500">About Us</a>
+                <a href="https://example.com/dashboard" class="block py-2 font-medium hover:text-orange-500">Dashboard</a>
+                <a href="https://example.com/careers" class="block py-2 font-medium hover:text-orange-500">Careers</a>
+                <a href="https://example.com/dispute-a-verdict" class="block py-2 font-medium hover:text-orange-500">Dispute a Verdict</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Your Digital 'A-Ha!' Moment Starts Here.</h1>
+                        <p class="text-xl mb-6">Bots, websites, logos – we make your digital life less 'argh!' and more 'OMG, that's awesome!'</p>
+                        <p class="text-orange-700 mb-8">Ready to Roll?</p>
+                        <a href="#how-to-order" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition inline-block">Let's Get Started</a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://picsum.photos/600/400?random=1" alt="Digital creativity" class="rounded-xl shadow-lg w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-20 bg-orange-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">By The Numbers</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="bg-white p-10 rounded-xl shadow-sm text-center">
+                        <p class="text-4xl font-bold text-orange-600 mb-2">10+</p>
+                        <p class="text-orange-800">Years of Fun</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-xl shadow-sm text-center">
+                        <p class="text-4xl font-bold text-orange-600 mb-2">150+</p>
+                        <p class="text-orange-800">Bots Made</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-xl shadow-sm text-center">
+                        <p class="text-4xl font-bold text-orange-600 mb-2">250+</p>
+                        <p class="text-orange-800">Websites Made</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-xl shadow-sm text-center">
+                        <p class="text-4xl font-bold text-orange-600 mb-2">750+</p>
+                        <p class="text-orange-800">Logos Made</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-xl shadow-sm text-center">
+                        <p class="text-4xl font-bold text-orange-600 mb-2">1000+</p>
+                        <p class="text-orange-800">Designs Crafted</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-xl shadow-sm text-center">
+                        <p class="text-4xl font-bold text-orange-600 mb-2">4.5+</p>
+                        <p class="text-orange-800">Trustpilot Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-orange-200 p-10 rounded-xl">
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                        </div>
+                        <p class="italic mb-4">"Carnival Services delivered an outstanding website that truly captures our brand. Their team was incredibly responsive and understood our vision perfectly. The results have significantly boosted our online presence and client engagement. Highly recommend their expertise!"</p>
+                        <p class="font-semibold">— CEO, Tech Innovations Inc.</p>
+                    </div>
+                    <div class="bg-orange-200 p-10 rounded-xl">
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="far fa-star text-orange-500"></i>
+                        </div>
+                        <p class="italic mb-4">"The custom bot they built for us has revolutionized our customer support. It's efficient, smart, and saves us countless hours. While there was a minor delay, the final product exceeded our expectations. Great work, Carnival Services!"</p>
+                        <p class="font-semibold">— Marketing Director, Global Brands</p>
+                    </div>
+                    <div class="bg-orange-200 p-10 rounded-xl">
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                        </div>
+                        <p class="italic mb-4">"Our new logo and graphic designs are simply stunning! Carnival Services captured our essence perfectly. They were a joy to work with, offering creative insights and delivering exactly what we needed to stand out. Fantastic design talent!"</p>
+                        <p class="font-semibold">— Founder, Creative Solutions Co.</p>
+                    </div>
+                    <div class="bg-orange-200 p-10 rounded-xl">
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                            <i class="fas fa-star text-orange-500"></i>
+                        </div>
+                        <p class="italic mb-4">"The website redesign was seamless and the results are amazing. Our e-commerce sales have seen a noticeable jump. Their team was professional, efficient, and very supportive throughout the entire process. A truly valuable partnership for us."</p>
+                        <p class="font-semibold">— Operations Manager, Retail Express</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Order Section -->
+        <section id="how-to-order" class="py-20 bg-orange-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <img src="https://picsum.photos/600/400?random=2" alt="Happy person" class="rounded-xl shadow-lg w-full h-auto">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-8">So, How Does This Magic Happen?</h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">1</div>
+                                <p>Hop into our Discord server! (Invite: <a href="https://discord.gg/yourinvite" class="text-orange-600 underline">discord.gg/yourinvite</a>)</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">2</div>
+                                <p>Quickly verify yourself to unlock everything.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">3</div>
+                                <p>Ready? Place your awesome order there.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">4</div>
+                                <p>We'll whip up a perfect quote just for you.</p>
+                            </div>
+                        </div>
+                        <a href="https://discord.gg/yourinvite" class="mt-8 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition inline-block flex items-center gap-2">
+                            <i class="fab fa-discord"></i> Join Our Discord Now!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-orange-900 text-orange-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between gap-8 mb-12">
+                <div class="md:w-1/3">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fas fa-bomb text-3xl text-orange-400"></i>
+                        <span class="text-2xl font-bold">Carnival Services</span>
+                    </div>
+                    <p class="mb-4">Creativity, transparency, and making digital dreams a fun reality. We're all about innovation.</p>
+                    <a href="https://discord.gg/yourinvite" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition inline-block">Ready to Chat? Join Our Community!</a>
+                </div>
+                <div class="md:w-1/3">
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://example.com/about-us" class="hover:text-orange-300 transition">About Us</a></li>
+                        <li><a href="https://example.com/dashboard" class="hover:text-orange-300 transition">Dashboard</a></li>
+                        <li><a href="https://example.com/careers" class="hover:text-orange-300 transition">Careers</a></li>
+                        <li><a href="https://example.com/dispute-a-verdict" class="hover:text-orange-300 transition">Dispute a Verdict</a></li>
+                    </ul>
+                </div>
+                <div class="md:w-1/3">
+                    <h3 class="text-xl font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://example.com/privacy-policy" class="hover:text-orange-300 transition">Privacy Policy</a></li>
+                        <li><a href="https://example.com/terms-of-service" class="hover:text-orange-300 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-orange-800 text-center">
+                <p>© 2025 Carnival Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
