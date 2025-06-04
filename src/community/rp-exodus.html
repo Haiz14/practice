@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Normal Title and Description -->
+    <title>Your Website Title - A Creative Description</title>
+    <meta
+      name="description"
+      content="Your website description for search engines (150-160 characters)."
+    />
+
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta
+      property="og:title"
+      content="Your Website Title - A Creative Description"
+    />
+    <meta
+      property="og:description"
+      content="Your website description for social sharing (more detailed than SEO description)."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/social-preview.jpg"
+    />
+
+    <!-- Tailwind CSS with custom color palette -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Muted pink palette (primary)
+              pink: {
+                50: "#f7e6f0",
+                100: "#efd1e0",
+                200: "#e0a3c2",
+                300: "#d175a3",
+                400: "#c24785",
+                500: "#b31966",
+                600: "#8f1452",
+                700: "#6b0f3d",
+                800: "#470a29",
+                900: "#230514",
+                950: "#12030a",
+              },
+              // Complementary colors
+              violet: {
+                500: "#7c3aed",
+                600: "#6d28d9",
+              },
+              purple: {
+                500: "#a855f7",
+                600: "#9333ea",
+              },
+            },
+            fontFamily: {
+              // Font families
+              body: ["Lato", "sans-serif"],
+              title: ['"Kaushan Script"', "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Google Fonts - Lato (body) and Kaushan Script (title) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Color Scheme Comment Implementation:
+         - Use pink-500 (b31966) as primary color
+         - Use violet-500 (7c3aed) for accents
+         - Use purple-500 (a855f7) for secondary accents
+         - Use lighter pinks (100-300) for backgrounds
+         - Use darker pinks (600-900) for text on light backgrounds
+    -->
+
+    <style>
+      /* Additional styles if needed */
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .title-font {
+        font-family: "Kaushan Script", cursive;
+      }
+    </style>
+  </head>
+  <body class="bg-pink-950 text-pink-100 font-body min-h-screen">
+    <!-- Hero Section -->
+    <section
+      class="relative py-20 bg-gradient-to-b from-pink-900 to-pink-950 overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1350&quot;);
+          background-size: cover;
+        "
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-5xl md:text-7xl font-title text-pink-200 mb-6">
+            RP EXODUS
+          </h1>
+          <h2 class="text-3xl md:text-5xl font-title text-pink-300 mb-8">
+            Where Writers Become Worlds
+          </h2>
+
+          <p class="text-xl text-pink-200 mb-10 leading-relaxed">
+            Come for the stories, stay for the people.<br />
+            Whether you're into fantasy quests or slice-of-life drama,<br />
+            there's a space here for your voice—and your characters.
+          </p>
+
+          <div class="mb-12">
+            <p class="text-2xl font-title text-pink-300 mb-2">
+              Jump in. Shape the story.
+            </p>
+            <p class="text-pink-400 italic">
+              Wholesome, creative, community-driven
+            </p>
+          </div>
+
+          <a
+            href="https://discord.gg/your-invite-code"
+            class="inline-block bg-violet-600 hover:bg-violet-500 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105"
+          >
+            Join the Community
+          </a>
+          <p class="mt-4 text-pink-300">Create. Connect. Collaborate.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-pink-900">
+      <div class="container mx-auto px-6">
+        <!-- First Row - First Two Cards -->
+        <div class="grid md:grid-cols-2 gap-8 text-center mb-8">
+          <div class="bg-pink-800 p-8 rounded-xl border border-pink-700">
+            <p class="text-5xl font-bold text-pink-200 mb-2">100+</p>
+            <p class="text-pink-300">Stories Started</p>
+          </div>
+          <div class="bg-pink-800 p-8 rounded-xl border border-pink-700">
+            <p class="text-5xl font-bold text-pink-200 mb-2">50+</p>
+            <p class="text-pink-300">Worlds Built Together</p>
+          </div>
+        </div>
+
+        <!-- Second Row - Countless Friendships (Centered and Larger) -->
+        <div class="flex justify-center mb-8">
+          <div
+            class="font-title bg-pink-800 p-8 rounded-xl border border-pink-700 text-center w-full md:w-2/3 lg:w-1/2"
+          >
+            <p class="text-6xl md:text-7xl font-bold text-pink-200 mb-2">
+              Countless
+            </p>
+            <p class="text-xl text-pink-300">Friendships Forged</p>
+          </div>
+        </div>
+
+        <!-- Third Row - Three Feature Cards -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-pink-800 p-6 rounded-lg border border-pink-700">
+            <h3 class="text-xl font-bold text-pink-200 mb-3">
+              Try New Personalities
+            </h3>
+            <p class="text-pink-300">
+              You get to try on new personalities. Ever wonder what it's like to
+              be a brave knight or a wise wizard? Roleplaying lets you step into
+              all sorts of fun and different characters!
+            </p>
+          </div>
+          <div class="bg-pink-800 p-6 rounded-lg border border-pink-700">
+            <h3 class="text-xl font-bold text-pink-200 mb-3">
+              Boosts Brainpower
+            </h3>
+            <p class="text-pink-300">
+              You'll find yourself getting super creative, solving tricky
+              puzzles, and thinking on your feet – all great for your mind!
+            </p>
+          </div>
+          <div class="bg-pink-800 p-6 rounded-lg border border-pink-700">
+            <h3 class="text-xl font-bold text-pink-200 mb-3">
+              A Chill Way to De-stress
+            </h3>
+            <p class="text-pink-300">
+              Getting lost in a fantasy world with friends can be a wonderful
+              escape and a fantastic way to unwind after a busy day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-16 bg-pink-950">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+          <h2 class="text-4xl font-title text-pink-200 mb-6">
+            Our Collective Tapestry
+          </h2>
+          <p class="text-xl text-pink-300">
+            RP EXODUS is a chill Discord roleplaying server just for folks 18
+            and up. We've got a cool mix of stories, from safe-for-work (SFW)
+            adventures to more adult (NSFW) plots, so there's always something
+            for everyone!
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-pink-900 p-8 rounded-xl border border-pink-800">
+            <div class="text-purple-500 text-4xl mb-4">📊</div>
+            <h3 class="text-xl font-bold text-pink-200 mb-3">
+              Weekly Word Count Leaderboard
+            </h3>
+            <p class="text-pink-300">
+              See how your writing stacks up! We celebrate our top wordsmiths
+              every week.
+            </p>
+          </div>
+          <div class="bg-pink-900 p-8 rounded-xl border border-pink-800">
+            <div class="text-purple-500 text-4xl mb-4">🏆</div>
+            <h3 class="text-xl font-bold text-pink-200 mb-3">
+              Achievements for Writing Milestones
+            </h3>
+            <p class="text-pink-300">
+              Hit huge writing goals and earn awesome achievements for 10k,
+              100k, and even 500k words!
+            </p>
+          </div>
+          <div class="bg-pink-900 p-8 rounded-xl border border-pink-800">
+            <div class="text-purple-500 text-4xl mb-4">🛡️</div>
+            <h3 class="text-xl font-bold text-pink-200 mb-3">
+              Awesome, Helpful Moderators
+            </h3>
+            <p class="text-pink-300">
+              Our friendly mods keep things running smoothly, making sure
+              everyone has a good time and feels safe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-pink-900">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-title text-center text-pink-200 mb-16">
+          What Our Community Says
+        </h2>
+
+        <!-- Featured Review (Large) -->
+        <div class="bg-pink-800 p-10 rounded-xl border-2 border-pink-600 mb-12">
+          <div
+            class="text-pink-200 italic text-xl md:text-2xl leading-relaxed mb-8"
+          >
+            "A true home for storytellers! RP EXODUS is more than just a server;
+            it's a vibrant community where creativity flourishes. The diverse
+            roleplay opportunities, from intricate fantasy to compelling
+            slice-of-life, keep me constantly inspired. The welcoming atmosphere
+            and supportive members make it a joy to log on every day. It truly
+            feels like a second home for my characters and me."
+          </div>
+          <div class="flex items-center">
+            <div
+              class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center text-pink-100 font-bold text-xl mr-6"
+            >
+              LW
+            </div>
+            <div>
+              <p class="text-pink-100 font-bold text-xl">LunaWrites</p>
+              <p class="text-pink-300">100k Words Achiever</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smaller Reviews Grid -->
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Review 1 -->
+          <div class="bg-pink-800 p-6 rounded-lg border border-pink-700">
+            <div class="text-pink-300 italic text-base mb-4">
+              "Super welcoming and fun! Found my people here. Everyone's so
+              supportive and the stories are amazing. Highly recommend for any
+              RPer!"
+            </div>
+            <div class="flex items-center">
+              <div
+                class="bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center text-pink-200 font-bold text-sm mr-3"
+              >
+                IW
+              </div>
+              <div>
+                <p class="text-pink-200 font-bold">Ink Weaver</p>
+                <p class="text-pink-400 text-xs">10k Words</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="bg-pink-800 p-6 rounded-lg border border-pink-700">
+            <div class="text-pink-300 italic text-base mb-4">
+              "Fantastic moderation and great plots. Smooth sailing here. Mods
+              are fair, stories are engaging. Never a dull moment."
+            </div>
+            <div class="flex items-center">
+              <div
+                class="bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center text-pink-200 font-bold text-sm mr-3"
+              >
+                SS
+              </div>
+              <div>
+                <p class="text-pink-200 font-bold">StorySpinner</p>
+                <p class="text-pink-400 text-xs">50k Words</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="bg-pink-800 p-6 rounded-lg border border-pink-700">
+            <div class="text-pink-300 italic text-base mb-4">
+              "My go-to for creative escape. Best RP server around. Love the
+              vibe and the endless possibilities. Keeps me coming back."
+            </div>
+            <div class="flex items-center">
+              <div
+                class="bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center text-pink-200 font-bold text-sm mr-3"
+              >
+                CC
+              </div>
+              <div>
+                <p class="text-pink-200 font-bold">CharacterCrafter</p>
+                <p class="text-pink-400 text-xs">25k Words</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Join Section -->
+    <section class="py-20 bg-pink-950">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2
+            class="text-5xl font-title text-center text-pink-100 mb-16 leading-tight"
+          >
+            How to Join Our Storytelling Community
+          </h2>
+
+          <div class="space-y-8 mb-16">
+            <div class="flex items-start">
+              <div
+                class="bg-violet-600 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-5 mt-1 text-xl font-bold"
+              >
+                1
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-pink-100 mb-2">
+                  Hop Into Our Discord
+                </h3>
+                <p class="text-lg text-pink-300 leading-relaxed">
+                  Join our Discord server with just one click:
+                  <a
+                    href="https://discord.gg/your-invite-code"
+                    class="text-purple-300 hover:text-purple-200 underline font-medium"
+                  >
+                    https://discord.gg/your-invite-code
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div
+                class="bg-violet-600 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-5 mt-1 text-xl font-bold"
+              >
+                2
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-pink-100 mb-2">
+                  Quick Age Verification
+                </h3>
+                <p class="text-lg text-pink-300 leading-relaxed">
+                  To maintain our 18+ community, we'll ask for simple age
+                  verification. Your privacy is protected - we only check your
+                  age, nothing else.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div
+                class="bg-violet-600 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-5 mt-1 text-xl font-bold"
+              >
+                3
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-pink-100 mb-2">
+                  Introduce Yourself
+                </h3>
+                <p class="text-lg text-pink-300 leading-relaxed">
+                  Drop a hello in our welcome channel! Our friendly community
+                  can't wait to meet you and help you get started.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div
+                class="bg-violet-600 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-5 mt-1 text-xl font-bold"
+              >
+                4
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-pink-100 mb-2">
+                  Begin Your Adventure
+                </h3>
+                <p class="text-lg text-pink-300 leading-relaxed">
+                  That's it! Explore roleplays, connect with writers, and start
+                  crafting your own unforgettable stories.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a
+              href="https://discord.gg/your-invite-code"
+              class="inline-block bg-violet-600 hover:bg-violet-500 text-white font-bold py-5 px-10 rounded-full text-xl transition duration-300 transform hover:scale-105 mb-6 shadow-lg hover:shadow-violet-500/20"
+            >
+              Join the Community Now
+            </a>
+            <p class="text-pink-200 font-title text-2xl italic">
+              "Jump in. Shape the story."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-900 py-8 border-t border-pink-800">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-pink-400">
+          © 2025 RP EXODUS. All stories belong to their respective creators.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
