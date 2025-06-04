@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <meta
+      name="title"
+      content="Crater Sun Dev | Expert Software Solutions & Team Enablement"
+    />
+    <meta
+      name="description"
+      content="Solve tough code problems fast with Crater Sun Development. We offer cloud, web dev, and team training to future-proof your tech stack."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:title"
+      content="Future-Proof Your Software with Crater Sun Development"
+    />
+    <meta
+      property="og:description"
+      content="Get expert help with legacy code, scalable cloud solutions, and empower your dev team. Discover how Crater Sun Development can transform your stack."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.yourwebsite.com" />
+
+    <!--
+    STYLE GUIDE:
+    - Titles/Headings: Use font-bodoni class (Bodoni Moda)
+    - Body text: Use font-spline class (Spline Sans Mono)
+    - Colors: Use Tailwind's default neutral palette (neutral-50 to neutral-900)
+      - Primary text: text-neutral-800
+      - Secondary text: text-neutral-600
+      - Borders: border-neutral-200
+      - Highlights: bg-neutral-100 or bg-neutral-900 for dark mode
+  -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Spline+Sans+Mono:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              bodoni: ["Bodoni Moda", "serif"],
+              spline: ["Spline Sans Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="font-spline text-neutral-700 bg-neutral-200"
+    x-data="{ mobileMenuOpen: false }"
+  >
+    <!-- Mobile Header & Sidebar -->
+    <div class="md:hidden">
+      <header
+        class="bg-neutral-900 text-neutral-100 p-4 flex justify-between items-center"
+      >
+        <h1 class="font-bodoni font-semibold text-2xl">Crater Sun Dev</h1>
+        <button @click="mobileMenuOpen = true" class="p-2 focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </header>
+
+      <!-- Mobile Sidebar -->
+      <div
+        x-show="mobileMenuOpen"
+        @click.stop.outside="mobileMenuOpen = false"
+        class="fixed inset-0 z-50 bg-neutral-900/80 backdrop-blur-sm transition-opacity duration-300"
+        x-transition:enter="ease-out duration-300"
+        x-transition:leave="ease-in duration-200"
+      >
+        <div
+          class="h-full w-3/4 bg-neutral-900 text-neutral-100 p-6 shadow-lg overflow-y-auto"
+        >
+          <div class="flex justify-between items-center mb-8">
+            <h2 class="font-bodoni font-semibold text-xl">Navigation</h2>
+            <button
+              @click="mobileMenuOpen = false"
+              class="p-2 hover:text-neutral-300"
+            >
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+
+          <!-- Sidebar Content -->
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-bodoni font-semibold text-neutral-200 mb-3">
+                🧭 Main Stuff
+              </h3>
+              <nav class="space-y-2">
+                <a href="#" class="block py-2 hover:text-neutral-300">Home</a>
+                <a href="#" class="block py-2 hover:text-neutral-300">Blog</a>
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Contact</a
+                >
+              </nav>
+            </div>
+
+            <div>
+              <h3 class="font-bodoni font-semibold text-neutral-200 mb-3">
+                👤 About Me
+              </h3>
+              <nav class="space-y-2">
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Resume for Isaac Newton</a
+                >
+                <a href="#" class="block py-2 hover:text-neutral-300">Papers</a>
+              </nav>
+            </div>
+
+            <div>
+              <h3 class="font-bodoni font-semibold text-neutral-200 mb-3">
+                📚 Brain Dump
+              </h3>
+              <nav class="space-y-2">
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Readings for Code Janitors</a
+                >
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Digital Garden</a
+                >
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Top of Mind</a
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="hidden md:block bg-neutral-900 text-neutral-100 py-6 px-8">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <h1 class="font-bodoni font-semibold text-3xl">Crater Sun Dev</h1>
+      </div>
+    </header>
+
+    <!-- Desktop Layout with Sidebar -->
+    <div class="md:flex md:min-h-screen">
+      <!-- Desktop Sidebar (same content as mobile menu) -->
+      <aside
+        class="hidden md:block w-64 bg-neutral-900 text-neutral-100 p-6 flex-shrink-0"
+      >
+        <div class="sticky top-0 pt-6">
+          <h2 class="font-bodoni font-semibold text-xl mb-8">Navigation</h2>
+
+          <!-- Sidebar Content -->
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-bodoni font-semibold text-neutral-200 mb-3">
+                🧭 Main Stuff
+              </h3>
+              <nav class="space-y-2">
+                <a href="#" class="block py-2 hover:text-neutral-300">Home</a>
+                <a href="#" class="block py-2 hover:text-neutral-300">Blog</a>
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Contact</a
+                >
+              </nav>
+            </div>
+
+            <div>
+              <h3 class="font-bodoni font-semibold text-neutral-200 mb-3">
+                👤 About Me
+              </h3>
+              <nav class="space-y-2">
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Resume for Steven E. Newton</a
+                >
+                <a href="#" class="block py-2 hover:text-neutral-300">Papers</a>
+              </nav>
+            </div>
+
+            <div>
+              <h3 class="font-bodoni font-semibold text-neutral-200 mb-3">
+                📚 Brain Dump
+              </h3>
+              <nav class="space-y-2">
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Readings for Code Janitors</a
+                >
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Digital Garden</a
+                >
+                <a href="#" class="block py-2 hover:text-neutral-300"
+                  >Top of Mind</a
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1">
+        <!-- Desktop Header -->
+
+        <main class="max-w-7xl mx-auto px-4 py-12">
+          <!-- Hero Section -->
+          <section class="mb-12 pt-8 max-w-xl">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+              <div class="space-y-8">
+                <h1
+                  class="font-bodoni font-semibold text-5xl md:text-6xl lg:text-7xl text-neutral-800 leading-tight tracking-tight"
+                >
+                  Crater Sun<br />Development
+                </h1>
+
+                <div class="prose prose-xl text-neutral-600 space-y-6">
+                  <p class="text-xl md:text-2xl leading-relaxed">
+                    We help you solve software problems fast — and build up your
+                    team's capabilities along the way.
+                  </p>
+                  <p class="text-lg md:text-xl leading-relaxed max-w-lg">
+                    Got old, messy code that's tough to maintain or improve?
+                    That's our specialty.
+                  </p>
+                  <p class="text-lg md:text-xl leading-relaxed max-w-sm">
+                    With over 10 years of experience across a wide range of
+                    tools and environments, we're ready to jump in and help.
+                  </p>
+                </div>
+
+                <div class="space-y-6 pt-4">
+                  <a
+                    href="mailto:example@example.com"
+                    class="inline-block px-10 py-5 bg-neutral-800 hover:bg-neutral-700 text-neutral-100 text-lg font-medium rounded-lg transition duration-200 transform hover:scale-[1.02]"
+                  >
+                    Email Us >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Features Sections -->
+
+          <section class="mb-24 space-y-16">
+            <!-- Cloud & Infrastructure -->
+            <div class="space-y-8 border-b-2 border-neutral-400 pb-8">
+              <h3
+                class="font-bodoni font-semibold text-3xl text-neutral-700 border-l-4 border-neutral-500 pl-4"
+              >
+                Cloud & Infrastructure
+              </h3>
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <p class="text-lg text-neutral-600">
+                    Scalable, reliable, automated deployments, faster delivery.
+                  </p>
+                </div>
+                <div class="space-y-6">
+                  <div
+                    class="flex items-start p-4 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors"
+                  >
+                    <div class="mr-4 mt-1 text-neutral-500">
+                      <i class="fas fa-cloud text-2xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-xl text-neutral-800">
+                        Kubernetes and cloud services
+                      </h4>
+                      <p class="text-sm text-neutral-500 mt-1">
+                        Orchestrated scalability
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-start p-4 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors"
+                  >
+                    <div class="mr-4 mt-1 text-neutral-500">
+                      <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-xl text-neutral-800">
+                        Automated build and deployment
+                      </h4>
+                      <p class="text-sm text-neutral-500 mt-1">
+                        CI/CD pipelines
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Software Development -->
+            <div class="space-y-8 border-b-2 border-neutral-400 pb-8">
+              <h3
+                class="font-bodoni font-semibold text-3xl text-neutral-700 border-l-4 border-neutral-500 pl-4"
+              >
+                Software Development
+              </h3>
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div
+                  class="p-6 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors"
+                >
+                  <h4 class="font-medium text-lg text-neutral-800 mb-2">
+                    Web Application Development
+                  </h4>
+                  <p class="text-sm text-neutral-500 uppercase tracking-wider">
+                    Dynamic User Experiences
+                  </p>
+                </div>
+                <div
+                  class="p-6 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors"
+                >
+                  <h4 class="font-medium text-lg text-neutral-800 mb-2">
+                    J2EE and Enterprise Application Servers
+                  </h4>
+                  <p class="text-sm text-neutral-500 uppercase tracking-wider">
+                    Scalable Business Logic
+                  </p>
+                </div>
+                <div
+                  class="p-6 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors"
+                >
+                  <h4 class="font-medium text-lg text-neutral-800 mb-2">
+                    Object-oriented design
+                  </h4>
+                  <p class="text-sm text-neutral-500 uppercase tracking-wider">
+                    Modular System Design
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Development Practices -->
+            <div class="space-y-8 border-b-2 border-neutral-400 pb-8">
+              <h3
+                class="font-bodoni font-semibold text-3xl text-neutral-700 border-l-4 border-neutral-500 pl-4"
+              >
+                Development Practices
+              </h3>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div
+                  class="p-4 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors flex items-start"
+                >
+                  <div class="mr-4 text-neutral-500">
+                    <i class="fas fa-bolt text-2xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-neutral-800">
+                      Lightweight methodologies
+                    </h4>
+                    <p class="text-sm text-neutral-500 mt-1">Agile & Lean</p>
+                  </div>
+                </div>
+                <div
+                  class="p-4 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors flex items-start"
+                >
+                  <div class="mr-4 text-neutral-500">
+                    <i class="fas fa-check-double text-2xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-neutral-800">
+                      Unit and Acceptance testing
+                    </h4>
+                    <p class="text-sm text-neutral-500 mt-1">
+                      Quality Assurance
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="p-4 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors flex items-start"
+                >
+                  <div class="mr-4 text-neutral-500">
+                    <i class="fas fa-code-branch text-2xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-neutral-800">
+                      Version Control
+                    </h4>
+                    <p class="text-sm text-neutral-500 mt-1">Git workflows</p>
+                  </div>
+                </div>
+                <div
+                  class="p-4 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors flex items-start"
+                >
+                  <div class="mr-4 text-neutral-500">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-neutral-800">
+                      Security Practices
+                    </h4>
+                    <p class="text-sm text-neutral-500 mt-1">
+                      Secure by Design
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Enablement -->
+            <div class="space-y-8">
+              <h3
+                class="font-bodoni font-semibold text-3xl text-neutral-700 border-l-4 border-neutral-500 pl-4"
+              >
+                Team Enablement
+              </h3>
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <p class="text-lg text-neutral-600 italic">
+                    Building stronger development teams
+                  </p>
+                </div>
+                <div class="space-y-6">
+                  <div
+                    class="p-6 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors flex items-start"
+                  >
+                    <div class="mr-4 text-neutral-500">
+                      <i class="fas fa-user-graduate text-2xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-xl text-neutral-800">
+                        Developer mentoring
+                      </h4>
+                      <p class="text-sm text-neutral-500">
+                        Knowledge transfer & growth
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="p-6 border-2 border-neutral-400 rounded-lg hover:border-neutral-600 transition-colors flex items-start"
+                  >
+                    <div class="mr-4 text-neutral-500">
+                      <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-xl text-neutral-800">
+                        Training development
+                      </h4>
+                      <p class="text-sm text-neutral-500">
+                        Custom learning programs
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Testimonials -->
+          <section class="mb-24 bg-neutral-100 rounded-xl p-8 md:p-12">
+            <div class="max-w-4xl mx-auto">
+              <h2
+                class="font-bodoni font-semibold text-3xl text-neutral-800 mb-12 text-center"
+              >
+                What Clients Say
+              </h2>
+
+              <div class="flex flex-wrap gap-8 mb-12">
+                <div class="p-6 border-2 border-neutral-900">
+                  <p
+                    class="text-neutral-600 mb-4 pb-4 border-b-2 border-neutral-600"
+                  >
+                    "We brought Crater Sun in during a crunch. Their cloud and
+                    CI/CD expertise turned things around fast. They even
+                    mentored our junior devs — a total win."
+                  </p>
+                  <div>
+                    <p class="font-medium text-neutral-800">Arcadia Systems</p>
+                    <p class="text-sm text-neutral-500">Austin, TX</p>
+                  </div>
+                </div>
+
+                <div class="p-6 border-2 border-neutral-900">
+                  <p
+                    class="text-neutral-600 mb-4 pb-4 border-b-2 border-neutral-600"
+                  >
+                    "Smart, reliable, and incredibly easy to work with. Crater
+                    Sun's knowledge of enterprise systems and testing made a
+                    huge difference in our product's stability and speed."
+                  </p>
+                  <div>
+                    <p class="font-medium text-neutral-800">
+                      BrightWave Digital
+                    </p>
+                    <p class="text-sm text-neutral-500">Budapest, Hungary</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <p class="text-neutral-600 mb-6">
+                  See how we've helped businesses worldwide achieve their
+                  software goals.
+                </p>
+                <a
+                  href="mailto:example@example.com"
+                  class="inline-block px-6 py-3 bg-neutral-800 hover:bg-neutral-700 text-neutral-100 font-medium rounded transition duration-200"
+                >
+                  Ready for your success story? Let's connect!
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-neutral-900 text-neutral-300 py-12 px-4">
+          <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <h3
+                  class="font-bodoni font-semibold text-xl text-neutral-100 mb-4"
+                >
+                  Crater Sun Dev
+                </h3>
+                <p class="text-sm">2003–2025</p>
+              </div>
+
+              <div>
+                <h4 class="font-medium text-neutral-100 mb-4">Connect</h4>
+                <div class="space-y-2">
+                  <a href="#" class="block hover:text-neutral-100">Email</a>
+                  <a
+                    href="https://example.com"
+                    class="block hover:text-neutral-100"
+                    >Mastodon</a
+                  >
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-medium text-neutral-100 mb-4">Explore</h4>
+                <div class="space-y-2">
+                  <a href="#" class="block hover:text-neutral-100">Blog</a>
+                  <a href="#" class="block hover:text-neutral-100"
+                    >Case Studies</a
+                  >
+                  <a href="#" class="block hover:text-neutral-100"
+                    >Digital Garden</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pt-8 border-t border-neutral-800 text-sm text-neutral-500"
+            >
+              <p>© 2025 Crater Sun Development. All rights reserved.</p>
+              <p class="mt-1">Last updated: 21st Jan 2025</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>
