@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" x-data="{ darkMode: false }" :class="{ 'dark': darkMode }">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lightning Leadership - Senior Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="2c9c4153-be1f-49a7-a084-59e6d885201b"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              playfair: ["Playfair Display", "serif"],
+            },
+            animation: {
+              "pulse-slow": "pulse 3s infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .flashing-light {
+          animation: pulse-slow 2s infinite;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-sm">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-xl font-bold text-blue-600 dark:text-blue-400">WB</div>
+        <nav class="flex items-center space-x-6">
+          <a
+            href="https://example.com/resume.pdf"
+            class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            <i class="fas fa-download"></i>
+            <span>Download Resume</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="py-16 md:py-24 bg-gradient-to-r from-blue-50 to-gray-100 dark:from-gray-800 dark:to-gray-900"
+    >
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12"
+      >
+        <!-- Picture/Initials -->
+        <div
+          class="w-48 h-48 rounded-full bg-blue-600 dark:bg-blue-700 flex items-center justify-center text-white text-6xl font-bold shadow-xl"
+        >
+          WB
+        </div>
+
+        <!-- Content -->
+        <div class="flex-1 space-y-4">
+          <h1
+            class="text-4xl md:text-5xl font-playfair font-bold text-gray-900 dark:text-white"
+          >
+            Warren Buffett
+          </h1>
+
+          <div class="flex items-center space-x-3">
+            <span
+              class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium flex items-center"
+            >
+              <span
+                class="flashing-light w-2 h-2 rounded-full bg-emerald-600 dark:bg-green-300 mr-2"
+              ></span>
+              Available for work
+            </span>
+          </div>
+
+          <h2 class="text-2xl text-gray-700 dark:text-gray-300 font-medium">
+            Senior Financial Adviser
+          </h2>
+
+          <div class="pt-2 space-y-2">
+            <div
+              class="flex items-center space-x-3 text-gray-600 dark:text-gray-400"
+            >
+              <i class="fas fa-envelope"></i>
+              <span>wb@example.com</span>
+            </div>
+            <div
+              class="flex items-center space-x-3 text-gray-600 dark:text-gray-400"
+            >
+              <i class="fab fa-linkedin"></i>
+              <a
+                href="https://www.linkedin.com/in/example"
+                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+                LinkedIn Profile
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section with Hero Style -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-blue-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Professional Experience
+      </h2>
+      <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+      <table class="w-full divide-y divide-gray-200 dark:divide-gray-700">
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+          <!-- Senior Financial Analyst -->
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <td class="py-6 px-8">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Senior Financial Analyst
+                </h3>
+                <p class="text-base font-medium text-gray-700 dark:text-gray-300">
+                  Apex Innovations Inc.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2020 - 2024
+                </p>
+              </div>
+            </td>
+            <td class="py-6 px-8 text-right">
+              <button class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none transition-colors">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-700 hidden-details">
+            <td colspan="2" class="px-8 py-6 text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2">
+                <li>Developed comprehensive financial models for forecasting and budgeting.</li>
+                <li>Analyzed key performance indicators to identify cost savings opportunities.</li>
+                <li>Prepared detailed financial reports for executive leadership.</li>
+                <li>Supported M&A due diligence with financial statement analysis.</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Financial Planning & Analysis Manager -->
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <td class="py-6 px-8">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Financial Planning & Analysis Manager
+                </h3>
+                <p class="text-base font-medium text-gray-700 dark:text-gray-300">
+                  Innovate Financial Group
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2023 - 2025
+                </p>
+              </div>
+            </td>
+            <td class="py-6 px-8 text-right">
+              <button class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none transition-colors">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-700 hidden-details">
+            <td colspan="2" class="px-8 py-6 text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2">
+                <li>Developed strategic financial plans and forecasts.</li>
+                <li>Provided analytical support for business decisions.</li>
+                <li>Monitored financial performance against budget.</li>
+                <li>Prepared executive-level presentations on financial results.</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Controller -->
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <td class="py-6 px-8">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Controller
+                </h3>
+                <p class="text-base font-medium text-gray-700 dark:text-gray-300">
+                  Synergy Tech Corp.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2022 - 2025
+                </p>
+              </div>
+            </td>
+            <td class="py-6 px-8 text-right">
+              <button class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none transition-colors">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-700 hidden-details">
+            <td colspan="2" class="px-8 py-6 text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2">
+                <li>Oversaw all accounting operations and financial reporting.</li>
+                <li>Managed month-end and year-end close processes.</li>
+                <li>Ensured compliance with GAAP and regulatory requirements.</li>
+                <li>Led budgeting and forecasting initiatives.</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Internal Auditor -->
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <td class="py-6 px-8">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Internal Auditor (CPA Preferred)
+                </h3>
+                <p class="text-base font-medium text-gray-700 dark:text-gray-300">
+                  Veritas Holdings Inc.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2020 - 2023
+                </p>
+              </div>
+            </td>
+            <td class="py-6 px-8 text-right">
+              <button class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none transition-colors">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-700 hidden-details">
+            <td colspan="2" class="px-8 py-6 text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2">
+                <li>Evaluated effectiveness of internal controls.</li>
+                <li>Conducted operational and financial audits.</li>
+                <li>Identified risks and recommended improvements.</li>
+                <li>Prepared clear and concise audit reports.</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Tax Accountant -->
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <td class="py-6 px-8">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Tax Accountant
+                </h3>
+                <p class="text-base font-medium text-gray-700 dark:text-gray-300">
+                  Global Solutions Ltd.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2021 - 2025
+                </p>
+              </div>
+            </td>
+            <td class="py-6 px-8 text-right">
+              <button class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none transition-colors">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-700 hidden-details">
+            <td colspan="2" class="px-8 py-6 text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2">
+                <li>Prepared corporate and individual income tax returns.</li>
+                <li>Researched complex tax regulations and provided advice.</li>
+                <li>Managed tax compliance and reporting deadlines.</li>
+                <li>Assisted with tax audits and inquiries.</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Audit Associate -->
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <td class="py-6 px-8">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Audit Associate (CPA Track)
+                </h3>
+                <p class="text-base font-medium text-gray-700 dark:text-gray-300">
+                  Delton & Co. CPAs
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2019 - 2022
+                </p>
+              </div>
+            </td>
+            <td class="py-6 px-8 text-right">
+              <button class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none transition-colors">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-700 hidden-details">
+            <td colspan="2" class="px-8 py-6 text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2">
+                <li>Conducted audit procedures for public and private clients.</li>
+                <li>Tested internal controls for SOX compliance.</li>
+                <li>Prepared financial statement disclosures.</li>
+                <li>Assisted in audit fieldwork and documentation.</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Staff Accountant -->
+          <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            <td class="py-6 px-8">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Staff Accountant
+                </h3>
+                <p class="text-base font-medium text-gray-700 dark:text-gray-300">
+                  Phoenix Ventures
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2018 - 2020
+                </p>
+              </div>
+            </td>
+            <td class="py-6 px-8 text-right">
+              <button class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none transition-colors">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-700 hidden-details">
+            <td colspan="2" class="px-8 py-6 text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5 space-y-2">
+                <li>Processed accounts payable and receivable transactions.</li>
+                <li>Reconciled bank statements and general ledger accounts.</li>
+                <li>Assisted with payroll processing and expense reports.</li>
+                <li>Maintained accurate financial records.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+    <script>
+      document
+        .querySelectorAll("tbody tr:not(.hidden-details)")
+        .forEach((row) => {
+          const button = row.querySelector("button");
+          button.addEventListener("click", () => {
+            const detailsRow = row.nextElementSibling;
+            const icon = button.querySelector("i");
+
+            if (detailsRow.classList.contains("hidden")) {
+              detailsRow.classList.remove("hidden");
+              icon.classList.replace("fa-chevron-down", "fa-chevron-up");
+            } else {
+              detailsRow.classList.add("hidden");
+              icon.classList.replace("fa-chevron-up", "fa-chevron-down");
+            }
+          });
+        });
+
+      // Initially hide all details rows
+      document.querySelectorAll(".hidden-details").forEach((row) => {
+        row.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
+
