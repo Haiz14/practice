@@ -1,0 +1,327 @@
+<!doctype html>
+<html
+  lang="en"
+  x-data="{ darkMode: false, experienceTable: { openItems: [], toggleDetails(index) { const position = this.openItems.indexOf(index); if (position !== -1) { this.openItems.splice(position, 1); } else { this.openItems.push(index); } }, experiences: [
+  {
+    title: 'Digital Cinema Paraprofessional',
+    company: 'College of Florida',
+    duration: '2022 - Present',
+    details: [
+      'Manages Film/TV Department equipment and coordinates production gear orders',
+      'Supervises community shoots, contributing to camera operation and editing',
+      'Operates a live stream for public events to boost accessibility',
+      'Redesigned checkout system with Google Forms and automation, increasing efficiency by over 80%'
+    ]
+  },
+  {
+    title: 'Equipment/Lab Assistant',
+    company: 'College of Florida',
+    duration: '2021 - 2022',
+    details: [
+      'Worked with Canon, Sony, and Blackmagic camera systems',
+      'Helped students with Adobe Premiere Pro and production gear troubleshooting',
+      'Prepared and packed equipment kits with supervisor for student use'
+    ]
+  }
+],
+ } }"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dylob Nut | Studio Technician</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "selector",
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ["Montserrat", "sans-serif"],
+              body: ["Open Sans", "sans-serif"],
+            },
+            animation: {
+              "pulse-slow": "pulse 3s infinite",
+            },
+            colors: {
+              navy: {
+                900: "#001f3f",
+                700: "#003366",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .flashing-light {
+          animation: pulse-slow 2s infinite;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-800 transition-colors duration-300 font-body"
+    :class="{ 'dark': darkMode }"
+  >
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-gray-700 shadow-sm">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div
+          class="text-xl font-bold text-blue-600 dark:text-blue-400 font-heading"
+        >
+          DN
+        </div>
+        <nav class="flex items-center space-x-6">
+          <a
+            href="#"
+            class="flex items-center space-x-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            <span class="underline">Download Resume</span>
+          </a>
+          <button
+            @click="darkMode = !darkMode"
+            class="flex items-center space-x-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            <i x-show="!darkMode" class="fas fa-moon"></i>
+            <i x-show="darkMode" class="fas fa-sun"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <!-- Card Container -->
+      <div class="max-w-4xl mx-auto">
+        <!-- Card -->
+        <div
+          class="bg-white dark:bg-gray-700 rounded-lg shadow-xl overflow-hidden"
+        >
+          <!-- Card Header with Navy Background -->
+          <div class="bg-navy-900 p-6 md:p-8">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <!-- Profile Picture -->
+              <div
+                class="w-32 h-32 rounded-full bg-navy-700 flex items-center justify-center text-white text-4xl font-bold shadow-lg font-heading"
+              >
+                DN
+              </div>
+
+              <!-- Profile Info -->
+              <div class="flex-1 space-y-3">
+                <h1
+                  class="text-3xl md:text-4xl font-heading font-extrabold text-white tracking-tight"
+                >
+                  DYLOB NUT
+                </h1>
+                <div class="flex items-center space-x-3">
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium flex items-center"
+                  >
+                    <span
+                      class="flashing-light w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 mr-2"
+                    ></span>
+                    AVAILABLE FOR WORK
+                  </span>
+                </div>
+                <h2
+                  class="text-xl md:text-2xl text-gray-300 font-heading font-semibold tracking-wide"
+                >
+                  STUDIO TECHNICIAN
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-6 md:p-8 space-y-8">
+            <!-- Contact Information -->
+            <div class="space-y-4">
+              <h3
+                class="text-xl font-heading font-bold text-gray-800 dark:text-gray-200 border-b pb-2"
+              >
+                CONTACT INFORMATION
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div
+                  class="flex items-center space-x-3 text-gray-700 dark:text-gray-300"
+                >
+                  <i
+                    class="fas fa-envelope text-blue-600 dark:text-blue-400"
+                  ></i>
+                  <span>example@example.com</span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 text-gray-700 dark:text-gray-300"
+                >
+                  <i class="fas fa-phone text-blue-600 dark:text-blue-400"></i>
+                  <span>(123) 456-7890</span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 text-gray-700 dark:text-gray-300"
+                >
+                  <i
+                    class="fab fa-linkedin text-blue-600 dark:text-blue-400"
+                  ></i>
+                  <a
+                    href="https://www.linkedin.com/in/example"
+                    class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    linkedin.com/in/example
+                  </a>
+                </div>
+                <div
+                  class="flex items-center space-x-3 text-gray-700 dark:text-gray-300"
+                >
+                  <i
+                    class="fas fa-map-marker-alt text-blue-600 dark:text-blue-400"
+                  ></i>
+                  <span>New York, NY</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="space-y-4">
+              <h3
+                class="text-xl font-heading font-bold text-gray-800 dark:text-gray-200 border-b pb-2"
+              >
+                TECHNICAL SKILLS
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                >
+                  Audio Engineering
+                </span>
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                >
+                  Equipment Maintenance
+                </span>
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                >
+                  Studio Setup
+                </span>
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                >
+                  Sound Mixing
+                </span>
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                >
+                  Troubleshooting
+                </span>
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                >
+                  Live Sound
+                </span>
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                >
+                  Digital Audio Workstations
+                </span>
+              </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="space-y-4">
+              <h3
+                class="text-xl font-heading font-bold text-gray-800 dark:text-gray-200 border-b border-gray-900 dark:border-gray-100 pb-2"
+              >
+                PROFESSIONAL EXPERIENCE
+              </h3>
+              <div class="space-y-3">
+                <template
+                  x-for="(experience, index) in experienceTable.experiences"
+                  :key="index"
+                >
+                  <div
+                    class="rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-700 overflow-hidden"
+                  >
+                    <div
+                      class="flex justify-between items-center gap-4 p-5 cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors duration-200"
+                      @click="experienceTable.toggleDetails(index)"
+                      :class="{ 'bg-blue-50 dark:bg-gray-600': experienceTable.openItems.includes(index) }"
+                    >
+                      <div class="flex-grow">
+                        <div class="flex flex-col space-y-1">
+                          <h3
+                            class="text-lg font-heading font-semibold text-gray-800 dark:text-gray-100"
+                            x-text="experience.title"
+                          ></h3>
+                          <p
+                            class="text-base font-medium text-blue-600 dark:text-blue-400"
+                            x-text="experience.company"
+                          ></p>
+                          <p
+                            class="text-sm text-gray-500 dark:text-gray-400"
+                            x-text="experience.duration"
+                          ></p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0">
+                        <div
+                          class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                        >
+                          <i
+                            class="fas fa-chevron-down text-lg transition-transform duration-300"
+                            :class="{ 'rotate-180': experienceTable.openItems.includes(index) }"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="px-5 pb-5 text-gray-700 dark:text-gray-300"
+                      x-show="experienceTable.openItems.includes(index)"
+                      x-transition:enter="transition ease-out duration-300"
+                      x-transition:enter-start="opacity-0 transform -translate-y-2"
+                      x-transition:enter-end="opacity-100 transform translate-y-0"
+                      x-transition:leave="transition ease-in duration-200"
+                      x-transition:leave-start="opacity-100 transform translate-y-0"
+                      x-transition:leave-end="opacity-0 transform -translate-y-2"
+                    >
+                      <div
+                        class="border-t border-gray-200 dark:border-gray-600 pt-4"
+                      >
+                        <ul class="list-disc pl-5 space-y-2">
+                          <template
+                            x-for="(item, i) in experience.details"
+                            :key="i"
+                          >
+                            <li x-text="item" class="leading-relaxed"></li>
+                          </template>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
