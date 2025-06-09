@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okamp AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['IBM Plex Sans', 'sans-serif'],
+                    serif: ['IBM Plex Serif', 'serif'],
+                },
+                extend: {
+                    colors: {
+                        muted: {
+                            blue: '#e0f2fe', // sky-100
+                        },
+                        navy: {
+                            blue: '#1e3a8a', // blue-900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50">
+    <!-- Header with Hamburger Menu -->
+    <header x-data="{ open: false }" class="sticky top-0 z-50 bg-slate-100 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-2xl font-serif font-bold text-navy-blue">Okamp AI</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#stack" class="text-slate-600 hover:text-navy-blue font-medium">The Stack</a>
+                    <a href="#" class="text-slate-600 hover:text-navy-blue font-medium">Documentation</a>
+                    <a href="#" class="text-slate-600 hover:text-navy-blue font-medium">Company</a>
+                    <a href="#" class="px-4 py-2 bg-navy-blue text-white rounded-md hover:bg-blue-800 transition">Join Waitlist</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button @click="open = !open" class="text-slate-600 focus:outline-none">
+                        <i x-show="!open" class="fas fa-bars text-xl"></i>
+                        <i x-show="open" class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div x-show="open" @click.away="open = false" class="md:hidden mt-4 py-4 border-t border-slate-200">
+                <div class="flex flex-col space-y-4">
+                    <a href="#stack" @click="open = false" class="text-slate-600 hover:text-navy-blue font-medium">The Stack</a>
+                    <a href="#" @click="open = false" class="text-slate-600 hover:text-navy-blue font-medium">Documentation</a>
+                    <a href="#" @click="open = false" class="text-slate-600 hover:text-navy-blue font-medium">Company</a>
+                    <a href="#" class="px-4 py-2 bg-navy-blue text-white rounded-md hover:bg-blue-800 transition text-center">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-[100px] bg-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h1 class="text-3xl md:text-5xl font-serif font-bold text-navy-blue mb-6">The only complete platform-as-a-service for distributed agentic AI systems of every scale</h1>
+                <p class="text-lg text-slate-600 mb-10">Coming in Summer 2025 - Save your spot on the waitlist!</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="px-6 py-3 bg-navy-blue text-white rounded-md hover:bg-blue-800 transition font-medium">Join Waitlist</a>
+                    <a href="#" class="px-6 py-3 border border-slate-300 text-slate-700 rounded-md hover:bg-slate-50 transition font-medium">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-3xl font-serif font-bold text-navy-blue mb-2">1ms</div>
+                    <p class="text-slate-600">Agent startup time</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-3xl font-serif font-bold text-navy-blue mb-2">100%</div>
+                    <p class="text-slate-600">Private models</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-3xl font-serif font-bold text-navy-blue mb-2">∞</div>
+                    <p class="text-slate-600">Scalability</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-3xl font-serif font-bold text-navy-blue mb-2">E2E</div>
+                    <p class="text-slate-600">Encryption</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Okamp Stack Section -->
+    <section id="stack" class="py-[100px] bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-[60px]">
+                <h2 class="text-3xl font-serif font-bold text-navy-blue mb-4">The Okamp Stack</h2>
+                <p class="text-xl text-slate-600">Connect AI to your enterprise apps and data</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-5">
+                <!-- Okamp SDK Card -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden px-5 md:px-[80px] py-[80px]">
+                    <div class="mb-[40px]">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-medium mb-3">Dev Tool</span>
+                        <h3 class="text-2xl font-serif font-bold text-navy-blue mb-3">Okamp SDK</h3>
+                        <p class="text-slate-600 mb-4">An easy-to-use dev tool for building agentic apps.</p>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Open-source Python library providing a foundation to build Agents that can plan, reason, remember, delegate, and invoke tools.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Use any LLM, Reasoning Model, or Embedding Model. All models are private.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Add any MCP (Model Context Protocol) Server to give Agents tools to interact with external services and data sources.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Create complex workflows with agents that can collaborate and work in parallel to achieve goals faster.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Enforce Guardrails and build robust Evals.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Okamp AI Platform Card -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden px-5 md:px-[80px] py-[80px]">
+                    <div class="mb-[40px]">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-medium mb-3">Serverless AI Runtime</span>
+                        <h3 class="text-2xl font-serif font-bold text-navy-blue mb-3">Okamp AI Platform</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-slate-50 rounded-lg">
+                            <i class="fas fa-server text-navy-blue mr-3"></i>
+                            <span>External Services & APIs</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-slate-50 rounded-lg">
+                            <i class="fas fa-robot text-navy-blue mr-3"></i>
+                            <span>AI Agents</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-slate-50 rounded-lg">
+                            <i class="fas fa-cloud text-navy-blue mr-3"></i>
+                            <span>Hosted/Remote MCP Servers</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-slate-50 rounded-lg">
+                            <i class="fas fa-brain text-navy-blue mr-3"></i>
+                            <span>Models</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Okamp Runtime Card -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden px-5 md:px-[80px] py-[80px]">
+                    <div class="mb-[40px]">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-medium mb-3">Hyper-scale Runtime</span>
+                        <h3 class="text-2xl font-serif font-bold text-navy-blue mb-3">Okamp Runtime</h3>
+                        <p class="text-slate-600 mb-4">Built for hyper-scale. AI agents can start in under 1ms, addressing any challenge in innovative new ways. Scale to millions of agents and solve embarrassingly parallel problems in seconds, not days.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <span class="px-3 py-2 bg-slate-50 text-slate-700 rounded-md text-center">Performant</span>
+                        <span class="px-3 py-2 bg-slate-50 text-slate-700 rounded-md text-center">Private</span>
+                        <span class="px-3 py-2 bg-slate-50 text-slate-700 rounded-md text-center">Scalable</span>
+                        <span class="px-3 py-2 bg-slate-50 text-slate-700 rounded-md text-center">Extendable</span>
+                    </div>
+                </div>
+                
+                <!-- Okamp Messaging Card -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden px-5 md:px-[80px] py-[80px]">
+                    <div class="mb-[40px]">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-medium mb-3">Secure Connections</span>
+                        <h3 class="text-2xl font-serif font-bold text-navy-blue mb-3">Okamp Messaging</h3>
+                        <p class="text-slate-600 mb-4">Automagically builds secure connections at embarrassingly parallel scale. Secured with end-to-end encryption and mutual authentication.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="font-medium text-slate-700">Connections between:</p>
+                        <ul class="space-y-2 text-slate-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-navy-blue mr-2"></i>
+                                <span>Agents</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-navy-blue mr-2"></i>
+                                <span>MCP Servers</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-navy-blue mr-2"></i>
+                                <span>SaaS Services</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-navy-blue mr-2"></i>
+                                <span>Private APIs</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-navy-blue mr-2"></i>
+                                <span>…and everything else.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Okamp Trust Card -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden px-5 md:px-[80px] py-[80px] md:col-span-2">
+                    <div class="mb-[40px]">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-medium mb-3">Integrity & Security</span>
+                        <h3 class="text-2xl font-serif font-bold text-navy-blue mb-3">Okamp Trust</h3>
+                        <p class="text-slate-600 mb-4">Rolls up dozens of point solutions. Foolproof because integrity is already built into Okamp.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-navy-blue mt-1 mr-2"></i>
+                                <span>Non-human Identity (NHIs)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-navy-blue mt-1 mr-2"></i>
+                                <span>Mutual-Authentication</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-navy-blue mt-1 mr-2"></i>
+                                <span>Authorization</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-navy-blue mt-1 mr-2"></i>
+                                <span>Attribute based access controls (ABAC)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-navy-blue mt-1 mr-2"></i>
+                                <span>Audit and tracing logs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-navy-blue mt-1 mr-2"></i>
+                                <span>Data governance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-navy-blue mt-1 mr-2"></i>
+                                <span>Multi-tenant partitioning for Okamp's customer's customer.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist CTA Section -->
+    <section class="py-[100px] bg-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-serif font-bold text-navy-blue mb-6">Ready to build with Okamp AI?</h2>
+                <p class="text-xl text-slate-600 mb-8">Join our waitlist to get early access to the platform when we launch in Summer 2025.</p>
+                <a href="#" class="inline-block px-8 py-3 bg-navy-blue text-white rounded-md hover:bg-blue-800 transition font-medium">Save Your Spot</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-[60px]">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h4 class="text-white font-serif font-bold text-lg mb-4">Okamp AI</h4>
+                    <p class="mb-4">The only complete platform-as-a-service for distributed agentic AI systems of every scale</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-4">Build Trust</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Learn</a></li>
+                        <li><a href="#" class="hover:text-white">Get Started</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Open Roles</a></li>
+                        <li><a href="#" class="hover:text-white">Our Mission & Values</a></li>
+                        <li><a href="#" class="hover:text-white">The Team</a></li>
+                        <li><a href="#" class="hover:text-white">Team Handbook</a></li>
+                        <li><a href="#" class="hover:text-white">Compliance & Audit Reports</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-4">Community</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Discussion</a></li>
+                        <li><a href="#" class="hover:text-white">Build Trust Community Discord</a></li>
+                        <li><a href="#" class="hover:text-white">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex flex-wrap gap-4 mb-4 md:mb-0">
+                        <a href="#" class="text-slate-400 hover:text-white text-sm">Privacy Notice</a>
+                        <a href="#" class="text-slate-400 hover:text-white text-sm">Terms of Service</a>
+                    </div>
+                    <p class="text-sm">© 2025 Okamp.io All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
