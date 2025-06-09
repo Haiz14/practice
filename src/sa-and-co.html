@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA and Co - Accounting Services</title>
+    <!-- Standard Meta Tags -->
+    <meta name="description" content="End-to-end accounting services tailored to growing companies, helping you stay compliant, informed, and ready to scale.">
+
+<!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Sa and Co - Accounting Services">
+    <meta property="og:description" content="End-to-end accounting services tailored to growing companies, helping you stay compliant, informed, and ready to scale.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://picsum.photos/1200/630.png">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['Source Serif Pro', 'serif'],
+                    serif: ['Playfair Display', 'serif'],
+                },
+                extend: {
+                    colors: {
+                        'text-primary': '#3a3a39',
+                        'text-secondary': '#878484',
+                        'surface-light': '#f5f3ef',
+                        'surface-dark': '#0e2039',
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                        '30': '7.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body x-data="{ open: false }" class="bg-surface-light text-text-primary font-sans">
+    <!-- Header -->
+    <header class="bg-surface-dark text-white">
+        <div class="container mx-auto px-6 py-6 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold">SA and Co</div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-10">
+                <a href="https://example.com/services" class="hover:text-gray-300 transition">Services</a>
+                <a href="https://example.com/about" class="hover:text-gray-300 transition">About</a>
+                <a href="https://example.com/clients" class="hover:text-gray-300 transition">Clients</a>
+                <a href="https://example.com/resources" class="hover:text-gray-300 transition">Resources</a>
+                <a href="https://example.com/contact" class="hover:text-gray-300 transition">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button @click="open = !open" class="md:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div x-show="open" x-collapse class="md:hidden bg-surface-dark">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4 pb-6 text-xl">
+                <a href="https://example.com/services" class="block py-3 hover:text-gray-300 transition">Services</a>
+                <a href="https://example.com/about" class="block py-3 hover:text-gray-300 transition">About</a>
+                <a href="https://example.com/clients" class="block py-3 hover:text-gray-300 transition">Clients</a>
+                <a href="https://example.com/resources" class="block py-3 hover:text-gray-300 transition">Resources</a>
+                <a href="https://example.com/contact" class="block py-3 hover:text-gray-300 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-surface-light">
+        <div class="container mx-auto px-6 py-20 md:py-30">
+            <div class="flex flex-col md:flex-row items-center gap-16 md:gap-22">
+                <!-- Text Content -->
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-5xl md:text-6xl font-serif font-bold mb-10 leading-tight">Built for Business</h1>
+                    <p class="text-xl text-text-secondary mb-12 max-w-lg leading-relaxed">
+                        End-to-end accounting services tailored to growing companies, helping you stay compliant, informed, and ready to scale.
+                    </p>
+                    
+                    <!-- Values Chips -->
+                    <div class="flex flex-wrap gap-3 mb-14">
+                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Integrity</span>
+                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Accuracy</span>
+                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Trust</span>
+                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Compliance</span>
+                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Clarity</span>
+                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Reliability</span>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://example.com/contact" class="bg-surface-dark text-white px-8 py-4 rounded hover:bg-opacity-90 transition font-medium">
+                            Contact Us
+                        </a>
+                        <a href="https://example.com/services" class="border-2 border-surface-dark text-surface-dark px-8 py-4 rounded hover:bg-surface-dark hover:text-white transition font-medium">
+                            Our Services
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Image -->
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/800/600?random=1" alt="Business accounting" 
+                         class="rounded-xl shadow-xl w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.plugin(Collapse)
+        })
+    </script>
+</body>
+</html>
