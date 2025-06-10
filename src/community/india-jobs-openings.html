@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaJobs Openings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'parrot-green': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        'manrope': ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-parrot-green-700 text-white py-6 px-8 rounded-b-3xl shadow-md">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-extrabold">IndiaJobsOpenings</h1>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-[48px]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl font-extrabold text-gray-900 mb-6">Find Your Next Opportunity in India</h1>
+                <p class="text-xl text-gray-600 mb-[48px]">Whether you're just starting out or switching careers, real jobs from real people—shared by a community that cares.</p>
+                
+                <div class="flex flex-wrap justify-center gap-[24px] mb-[48px]">
+                    <span class="px-6 py-3 bg-parrot-green-100 text-parrot-green-800 rounded-full font-medium">Software Developer</span>
+                    <span class="px-6 py-3 bg-parrot-green-100 text-parrot-green-800 rounded-full font-medium">Product Manager</span>
+                    <span class="px-6 py-3 bg-parrot-green-100 text-parrot-green-800 rounded-full font-medium">UX Designer</span>
+                    <span class="px-6 py-3 bg-parrot-green-100 text-parrot-green-800 rounded-full font-medium">Data Analyst</span>
+                    <span class="px-6 py-3 bg-parrot-green-100 text-parrot-green-800 rounded-full font-medium">Marketing Executive</span>
+                    <span class="px-6 py-3 bg-parrot-green-100 text-parrot-green-800 rounded-full font-medium">Business Analyst</span>
+                    <span class="px-6 py-3 bg-parrot-green-100 text-parrot-green-800 rounded-full font-medium">Frontend Engineer</span>
+                    <span class="px-6 py-3 bg-parrot-green-100 text-parrot-green-800 rounded-full font-medium">HR Recruiter</span>
+                </div>
+                
+                <a href="https://www.reddit.com/r/IndiaJobsOpenings/top/" class="inline-block px-8 py-4 bg-parrot-green-600 hover:bg-parrot-green-700 text-white font-bold rounded-lg shadow-lg transition duration-200">
+                    Explore Jobs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-[48px] bg-parrot-green-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-[48px]">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Why r/IndiaJobOpenings Works</h2>
+                <p class="text-xl text-gray-600">A job community built for the people, by the people—transparent, honest, and always helpful.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-[48px] max-w-6xl mx-auto">
+                <div class="bg-white p-[30px] rounded-xl shadow-md">
+                    <div class="flex items-center gap-[24px] mb-[38px]">
+                        <div class="w-14 h-14 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600 text-2xl">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Real Job Listings</h3>
+                    </div>
+                    <p class="text-gray-600">All posts are by actual users, with real details and clear intentions.</p>
+                </div>
+                
+                <div class="bg-white p-[30px] rounded-xl shadow-md">
+                    <div class="flex items-center gap-[24px] mb-[38px]">
+                        <div class="w-14 h-14 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600 text-2xl">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Community Moderated</h3>
+                    </div>
+                    <p class="text-gray-600">Posts are vetted by mods and members to keep things scam-free and helpful.</p>
+                </div>
+                
+                <div class="bg-white p-[30px] rounded-xl shadow-md">
+                    <div class="flex items-center gap-[24px] mb-[38px]">
+                        <div class="w-14 h-14 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600 text-2xl">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Career Diverse</h3>
+                    </div>
+                    <p class="text-gray-600">From entry-level to executive roles, across tech, marketing, design and more.</p>
+                </div>
+                
+                <div class="bg-white p-[30px] rounded-xl shadow-md">
+                    <div class="flex items-center gap-[24px] mb-[38px]">
+                        <div class="w-14 h-14 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600 text-2xl">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Honest Advice</h3>
+                    </div>
+                    <p class="text-gray-600">Ask questions, get feedback, and grow with insights from people who've been there.</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-[24px] max-w-6xl mx-auto mt-[48px]">
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-parrot-green-700">10k+</p>
+                    <p class="text-gray-600">members helping each other find jobs</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-parrot-green-700">100+</p>
+                    <p class="text-gray-600">job posts monthly across industries</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-parrot-green-700">1+</p>
+                    <p class="text-gray-600">years of active moderation and updates</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-parrot-green-700">90%+</p>
+                    <p class="text-gray-600">of top posts are employer-shared</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Do's and Don'ts Section -->
+    <section class="py-[48px]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-[48px]">Community Guidelines</h2>
+                
+                <div x-data="{ active: 1 }" class="space-y-[24px]">
+                    <div x-data="{ id: 1 }" class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <button @click="active = (active === id) ? 0 : id" class="w-full flex justify-between items-center p-[30px] bg-white hover:bg-gray-50 transition">
+                            <div class="flex items-center gap-[24px]">
+                                <div class="w-12 h-12 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Provide Complete Job Details</h3>
+                            </div>
+                            <i class="fas text-gray-400 text-xl transition-transform duration-200" :class="{ 'fa-chevron-down': active !== id, 'fa-chevron-up': active === id }"></i>
+                        </button>
+                        <div x-show="active === id" x-collapse class="px-[30px] pb-[30px] text-gray-600">
+                            Include job title, company name, location, description, qualifications, apply method, and deadlines if possible.
+                        </div>
+                    </div>
+                    
+                    <div x-data="{ id: 2 }" class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <button @click="active = (active === id) ? 0 : id" class="w-full flex justify-between items-center p-[30px] bg-white hover:bg-gray-50 transition">
+                            <div class="flex items-center gap-[24px]">
+                                <div class="w-12 h-12 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600">
+                                    <i class="fas fa-ban"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">No Fake Jobs or Scams</h3>
+                            </div>
+                            <i class="fas text-gray-400 text-xl transition-transform duration-200" :class="{ 'fa-chevron-down': active !== id, 'fa-chevron-up': active === id }"></i>
+                        </button>
+                        <div x-show="active === id" x-collapse class="px-[30px] pb-[30px] text-gray-600">
+                            Only post verified and real opportunities—fake or scam posts will be removed.
+                        </div>
+                    </div>
+                    
+                    <div x-data="{ id: 3 }" class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <button @click="active = (active === id) ? 0 : id" class="w-full flex justify-between items-center p-[30px] bg-white hover:bg-gray-50 transition">
+                            <div class="flex items-center gap-[24px]">
+                                <div class="w-12 h-12 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Be Respectful</h3>
+                            </div>
+                            <i class="fas text-gray-400 text-xl transition-transform duration-200" :class="{ 'fa-chevron-down': active !== id, 'fa-chevron-up': active === id }"></i>
+                        </button>
+                        <div x-show="active === id" x-collapse class="px-[30px] pb-[30px] text-gray-600">
+                            Treat members kindly, avoid offensive language, and foster a positive community.
+                        </div>
+                    </div>
+                    
+                    <div x-data="{ id: 4 }" class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <button @click="active = (active === id) ? 0 : id" class="w-full flex justify-between items-center p-[30px] bg-white hover:bg-gray-50 transition">
+                            <div class="flex items-center gap-[24px]">
+                                <div class="w-12 h-12 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600">
+                                    <i class="fas fa-scroll"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Follow Reddit's Guidelines</h3>
+                            </div>
+                            <i class="fas text-gray-400 text-xl transition-transform duration-200" :class="{ 'fa-chevron-down': active !== id, 'fa-chevron-up': active === id }"></i>
+                        </button>
+                        <div x-show="active === id" x-collapse class="px-[30px] pb-[30px] text-gray-600">
+                            Abide by Reddit's rules for respectful, legal, and appropriate content.
+                        </div>
+                    </div>
+                    
+                    <div x-data="{ id: 5 }" class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <button @click="active = (active === id) ? 0 : id" class="w-full flex justify-between items-center p-[30px] bg-white hover:bg-gray-50 transition">
+                            <div class="flex items-center gap-[24px]">
+                                <div class="w-12 h-12 rounded-full bg-parrot-green-100 flex items-center justify-center text-parrot-green-600">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">No Hire Me Posts</h3>
+                            </div>
+                            <i class="fas text-gray-400 text-xl transition-transform duration-200" :class="{ 'fa-chevron-down': active !== id, 'fa-chevron-up': active === id }"></i>
+                        </button>
+                        <div x-show="active === id" x-collapse class="px-[30px] pb-[30px] text-gray-600">
+                            Use the Weekly Megathread for "Hire Me" posts—elsewhere they'll be removed.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-[48px] bg-parrot-green-700 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Join the Movement of Open Hiring</h2>
+                <p class="text-xl mb-[48px]">r/IndiaJobOpenings is where real people help real people get hired. No fluff. No fakes.</p>
+                <a href="https://www.reddit.com/r/IndiaJobsOpenings/top/" class="inline-block px-8 py-4 bg-white hover:bg-gray-100 text-parrot-green-700 font-bold rounded-lg shadow-lg transition duration-200">
+                    Start Exploring
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
