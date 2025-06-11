@@ -3,48 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SA and Co - Accounting Services</title>
+    <title>Website Script for SA & Co. | Chartered Accountants</title>
     <!-- Standard Meta Tags -->
-    <meta name="description" content="End-to-end accounting services tailored to growing companies, helping you stay compliant, informed, and ready to scale.">
+    <meta name="description" content="Helping founders, professionals, family businesses, and NRIs make smarter financial decisions with structure and strategy.">
 
 <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:title" content="Sa and Co - Accounting Services">
-    <meta property="og:description" content="End-to-end accounting services tailored to growing companies, helping you stay compliant, informed, and ready to scale.">
+    <meta property="og:title" content="Website Script for SA & Co. | Chartered Accountants">
+    <meta property="og:description" content="Helping founders, professionals, family businesses, and NRIs make smarter financial decisions with structure and strategy.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://picsum.photos/1200/630.png">
 
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+Pro&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                fontFamily: {
-                    sans: ['Source Serif Pro', 'serif'],
-                    serif: ['Playfair Display', 'serif'],
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+    tailwind.config = {
+        theme: {
+            fontFamily: {
+                sans: ['Source Sans Pro', 'sans-serif'],
+                serif: ['Lora', 'serif'],
+            },
+            extend: {
+                colors: {
+                    'gray-dark': '#333333',
+                    'gray-light': '#777777',
+                    'primary-light': '#f5f3ef',
+                    'primary-dark': '#0e2039',
+                    'secondary': '#4a6fa5',
+                    'accent': '#d4a017'
                 },
-                extend: {
-                    colors: {
-                        'text-primary': '#3a3a39',
-                        'text-secondary': '#878484',
-                        'surface-light': '#f5f3ef',
-                        'surface-dark': '#0e2039',
-                    },
-                    spacing: {
-                        '18': '4.5rem',
-                        '22': '5.5rem',
-                        '30': '7.5rem',
-                    }
-                }
             }
         }
-    </script>
+    }
+</script>
 </head>
-<body x-data="{ open: false }" class="bg-surface-light text-text-primary font-sans">
+<body x-data="{ open: false }" class="bg-primary-light text-gray-dark font-sans">
     <!-- Header -->
-    <header class="bg-surface-dark text-white">
+    <header class="bg-primary-dark text-white">
         <div class="container mx-auto px-6 py-6 flex justify-between items-center">
             <!-- Logo -->
             <div class="text-2xl font-bold">SA and Co</div>
@@ -67,7 +64,7 @@
         </div>
         
         <!-- Mobile Navigation -->
-        <div x-show="open" x-collapse class="md:hidden bg-surface-dark">
+        <div x-show="open" x-collapse class="md:hidden bg-primary-dark">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-4 pb-6 text-xl">
                 <a href="https://example.com/services" class="block py-3 hover:text-gray-300 transition">Services</a>
                 <a href="https://example.com/about" class="block py-3 hover:text-gray-300 transition">About</a>
@@ -79,45 +76,370 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-surface-light">
-        <div class="container mx-auto px-6 py-20 md:py-30">
-            <div class="flex flex-col md:flex-row items-center gap-16 md:gap-22">
+    <section class="bg-primary-light py-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
                 <!-- Text Content -->
                 <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h1 class="text-5xl md:text-6xl font-serif font-bold mb-10 leading-tight">Built for Business</h1>
-                    <p class="text-xl text-text-secondary mb-12 max-w-lg leading-relaxed">
-                        End-to-end accounting services tailored to growing companies, helping you stay compliant, informed, and ready to scale.
+                    <h1 class="text-5xl md:text-6xl font-serif font-bold mb-8 leading-tight">Clarity. Compliance. Confidence.</h1>
+                    <p class="text-xl text-gray-light mb-8 leading-relaxed">
+                        Helping founders, professionals, family businesses, and NRIs make smarter financial decisions with structure and strategy.
                     </p>
                     
-                    <!-- Values Chips -->
-                    <div class="flex flex-wrap gap-3 mb-14">
-                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Integrity</span>
-                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Accuracy</span>
-                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Trust</span>
-                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Compliance</span>
-                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Clarity</span>
-                        <span class="text-secondary bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium">Reliability</span>
+                    <!-- Highlight Banner -->
+                    <div class="flex flex-col gap-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary-dark"></i>
+                            <span>35+ years of trust and execution</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary-dark"></i>
+                            <span>Offices in Mumbai, serving clients worldwide</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary-dark"></i>
+                            <span>Specialist support in Tax, Compliance, Structuring & Consulting</span>
+                        </div>
                     </div>
                     
                     <!-- Action Buttons -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://example.com/contact" class="bg-surface-dark text-white px-8 py-4 rounded hover:bg-opacity-90 transition font-medium">
-                            Contact Us
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#services" class="bg-primary-dark text-white px-8 py-4 rounded-sm hover:bg-opacity-90 transition font-medium">
+                            Explore Services
                         </a>
-                        <a href="https://example.com/services" class="border-2 border-surface-dark text-surface-dark px-8 py-4 rounded hover:bg-surface-dark hover:text-white transition font-medium">
-                            Our Services
+                        <a href="#workshops" class="border-2 border-primary-dark text-primary-dark px-8 py-4 rounded-sm hover:bg-primary-dark hover:text-white transition font-medium">
+                            Join Our Next Workshop
                         </a>
                     </div>
                 </div>
                 
                 <!-- Image -->
                 <div class="md:w-1/2">
-                    <img src="https://picsum.photos/800/600?random=1" alt="Business accounting" 
-                         class="rounded-xl shadow-xl w-full h-auto object-cover">
+                    <img src="https://picsum.photos/800/600?random=1" alt="SA & Co. Chartered Accountants" 
+                         class="rounded-sm shadow-md w-full h-auto object-cover">
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-serif font-bold mb-8">More than Just Chartered Accountants.</h2>
+                <p class="text-lg text-gray-light mb-8">
+                    At SA & Co., we believe clarity is the foundation of financial confidence. With the guidance of CA Niranjan Agarwal, driven forward by CA Sahil Agarwal, we combine decades of experience with modern execution and systems-first thinking.
+                </p>
+                <p class="text-lg text-gray-light mb-12">
+                    We don't just file returns or tick boxes—we guide businesses, professionals, and families to build structures they can rely on. Whether you're a first-time freelancer or a legacy business, we meet you where you are, and help you grow from there.
+                </p>
+                
+                <!-- Key Values -->
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="bg-white p-6 rounded-sm shadow-sm text-center max-w-xs">
+                        <i class="fas fa-chess text-3xl text-primary-dark mb-4"></i>
+                        <h3 class="font-serif font-bold mb-2">Strategic over transactional</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-sm shadow-sm text-center max-w-xs">
+                        <i class="fas fa-handshake text-3xl text-primary-dark mb-4"></i>
+                        <h3 class="font-serif font-bold mb-2">Accessible and proactive</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-sm shadow-sm text-center max-w-xs">
+                        <i class="fas fa-heart text-3xl text-primary-dark mb-4"></i>
+                        <h3 class="font-serif font-bold mb-2">Built on relationships, not just reports</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-serif font-bold mb-12 text-center">Services That Simplify and Strengthen</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Service Card 1 -->
+            <div class="bg-primary-light p-8 rounded-sm shadow-sm">
+                <div class="flex items-center gap-9 mb-6">
+                    <i class="fas fa-file-invoice-dollar text-3xl text-primary-dark"></i>
+                    <h3 class="text-2xl font-serif font-bold">Taxation Advisory</h3>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Income Tax</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">TDS</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Capital Gains Planning</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Structuring</span>
+                </div>
+                <p class="text-gray-light">
+                    Helping you keep more of what you earn, with full transparency.
+                </p>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="bg-primary-light p-8 rounded-sm shadow-sm">
+                <div class="flex items-center gap-9 mb-6">
+                    <i class="fas fa-chart-line text-3xl text-primary-dark"></i>
+                    <h3 class="text-2xl font-serif font-bold">Business Consulting</h3>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">ERP Transitions</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Process Design</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Data Refinement</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Valuations</span>
+                </div>
+                <p class="text-gray-light">
+                    We don't just manage numbers; we refine your backend so your business runs smoother.
+                </p>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="bg-primary-light p-8 rounded-sm shadow-sm">
+                <div class="flex items-center gap-9 mb-6">
+                    <i class="fas fa-balance-scale text-3xl text-primary-dark"></i>
+                    <h3 class="text-2xl font-serif font-bold">Compliance Management</h3>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">GST</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Professional Tax</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Udyam</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Company Filings</span>
+                </div>
+                <p class="text-gray-light">
+                    Avoid chaos. Stay compliant without the confusion.
+                </p>
+            </div>
+            
+            <!-- Service Card 4 -->
+            <div class="bg-primary-light p-8 rounded-sm shadow-sm">
+                <div class="flex items-center gap-9 mb-6">
+                    <i class="fas fa-search text-3xl text-primary-dark"></i>
+                    <h3 class="text-2xl font-serif font-bold">Audit & Assurance</h3>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Statutory Audits</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Internal Audits</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Due Diligence</span>
+                    <span class="bg-primary-dark/80 text-white px-3 py-1 rounded-sm text-sm">Certifications</span>
+                </div>
+                <p class="text-gray-light">
+                    Clean books, clear conscience. We bring trust and insight.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-4xl font-serif font-bold mb-4">Clarity Hub: Articles That Simplify Finance</h2>
+                <p class="text-lg text-gray-light mb-6">
+                    Breakdowns, explainers, and insights across tax, compliance, structuring and small business finance.
+                </p>
+                <a href="#" class="inline-block border-2 border-primary-dark text-primary-dark px-8 py-3 rounded-sm hover:bg-primary-dark hover:text-white transition font-medium">
+                    Browse Articles
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white p-6 rounded-sm shadow-sm">
+                    <img src="https://picsum.photos/400/300?random=2" alt="Blog post image" class="w-full h-48 object-cover rounded-sm mb-4">
+                    <h3 class="text-xl font-serif font-bold mb-3">Understanding Input Tax Credit in 3 Steps</h3>
+                    <a href="#" class="text-primary-dark font-medium hover:underline">Read more →</a>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white p-6 rounded-sm shadow-sm">
+                    <img src="https://picsum.photos/400/300?random=3" alt="Blog post image" class="w-full h-48 object-cover rounded-sm mb-4">
+                    <h3 class="text-xl font-serif font-bold mb-3">TDS for Freelancers: What You Need to Know</h3>
+                    <a href="#" class="text-primary-dark font-medium hover:underline">Read more →</a>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white p-6 rounded-sm shadow-sm">
+                    <img src="https://picsum.photos/400/300?random=4" alt="Blog post image" class="w-full h-48 object-cover rounded-sm mb-4">
+                    <h3 class="text-xl font-serif font-bold mb-3">When Does GST Registration Actually Become Mandatory?</h3>
+                    <a href="#" class="text-primary-dark font-medium hover:underline">Read more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="workshops" class="py-12 bg-primary-dark text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto mb-12">
+                <h2 class="text-4xl font-serif font-bold mb-6 text-center">Attend Our Next Session</h2>
+                <p class="text-lg mb-8 text-center">
+                    Our free monthly group consultations help early-stage founders and freelancers understand tax, compliance, and finance in an approachable setting.
+                </p>
+                
+                <div class="bg-white text-gray-dark p-8 rounded-sm shadow-sm">
+                    <h3 class="text-2xl font-serif font-bold mb-4">Tax Clarity: What Every Freelancer & Founder Should Know</h3>
+                    <div class="flex flex-col md:flex-row gap-6 mb-6">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-calendar-day text-primary-dark"></i>
+                            <span>15th June 2025</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-primary-dark"></i>
+                            <span>Andheri West Office (Limited to 12 seats)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-primary-dark text-white px-6 py-3 rounded-sm hover:bg-opacity-90 transition font-medium">
+                            Register Now
+                        </a>
+                        <a href="#" class="border-2 border-primary-dark text-primary-dark px-6 py-3 rounded-sm hover:bg-primary-dark hover:text-white transition font-medium">
+                            View Past Sessions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-4xl font-serif font-bold mb-6">We're Hiring Smart, Curious People</h2>
+                <p class="text-lg text-gray-light mb-8">
+                    If you're driven by clarity, detail, and structure—you'll find a good fit here.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Role 1 -->
+                <div class="bg-white p-6 rounded-sm shadow-sm text-center">
+                    <i class="fas fa-file-contract text-3xl text-primary-dark mb-4"></i>
+                    <h3 class="text-xl font-serif font-bold mb-3">Article Assistants (Mumbai Office)</h3>
+                </div>
+                
+                <!-- Role 2 -->
+                <div class="bg-white p-6 rounded-sm shadow-sm text-center">
+                    <i class="fas fa-search-dollar text-3xl text-primary-dark mb-4"></i>
+                    <h3 class="text-xl font-serif font-bold mb-3">Audit & Compliance Interns</h3>
+                </div>
+                
+                <!-- Role 3 -->
+                <div class="bg-white p-6 rounded-sm shadow-sm text-center">
+                    <i class="fas fa-pen-fancy text-3xl text-primary-dark mb-4"></i>
+                    <h3 class="text-xl font-serif font-bold mb-3">Research & Content Writers (Remote)</h3>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="bg-primary-dark text-white px-8 py-3 rounded-sm hover:bg-opacity-90 transition font-medium">
+                    Apply Now
+                </a>
+                <a href="#" class="border-2 border-primary-dark text-primary-dark px-8 py-3 rounded-sm hover:bg-primary-dark hover:text-white transition font-medium">
+                    Know More
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+<section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Left Column - Text Content -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-serif font-bold mb-6 text-gray-dark">Let's Talk</h2>
+                    <p class="text-lg text-gray-light mb-8 leading-relaxed">
+                        Reach out for a clarity call, a consultation, or just to say hello. We'd love to hear from you.
+                    </p>
+                    
+                    <div class="bg-primary-light p-8 rounded-sm shadow-sm">
+                        <!-- Contact Info -->
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-5">
+                                <div class="bg-white p-3 rounded-sm shadow-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-serif font-bold text-lg text-gray-dark mb-1">Location</h3>
+                                    <p class="text-gray-light">905, Morya Blue Moon, Off Link Road, Andheri West, Mumbai - 400053</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-5">
+                                <div class="bg-white p-3 rounded-sm shadow-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-serif font-bold text-lg text-gray-dark mb-1">Phone</h3>
+                                    <p class="text-gray-light">+91 9769015236</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-5">
+                                <div class="bg-white p-3 rounded-sm shadow-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-serif font-bold text-lg text-gray-dark mb-1">Email</h3>
+                                    <p class="text-gray-light">sahil@knafca.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="mt-10 flex flex-wrap gap-4">
+                            <a href="https://wa.me/+919769015236" class="flex items-center gap-2 bg-primary-dark text-white px-6 py-3 rounded-sm hover:bg-opacity-90 transition font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.479 5.392 1.479 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                                WhatsApp Us
+                            </a>
+                            <a href="mailto:sahil@knafca.com" class="flex items-center gap-2 border-2 border-primary-dark text-primary-dark px-6 py-3 rounded-sm hover:bg-primary-dark hover:text-white transition font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                Email Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Map/Image -->
+                <div class="lg:w-1/2">
+                    <div class="h-full bg-gray-100 rounded-sm overflow-hidden shadow-sm">
+                        <iframe src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Ratan%20Kunj%20CHS,%20905,%20Morya%20Blue%20Moon,%20Off%20Link%20Rd,%20Andheri%20West,%20Mumbai,%20Maharashtra%20400053%20Mumbai+(Sa%20and%20Co)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                style="min-height: 400px;" 
+                                frameborder="0" 
+                                allowfullscreen="" 
+                                aria-hidden="false" 
+                                tabindex="0"
+                                class="rounded-sm">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    
 
     <script>
         document.addEventListener('alpine:init', () => {
