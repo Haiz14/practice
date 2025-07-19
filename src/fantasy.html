@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Doomspire Chronicles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fiery: {
+                            500: 'hsl(15, 80%, 50%)',
+                            600: 'hsl(15, 85%, 45%)'
+                        },
+                        mystic: {
+                            400: 'hsl(270, 40%, 60%)',
+                            500: 'hsl(270, 50%, 50%)'
+                        },
+                        steel: {
+                            400: 'hsl(210, 20%, 55%)',
+                            500: 'hsl(210, 25%, 45%)'
+                        },
+                        shadow: {
+                            600: 'hsl(280, 30%, 35%)',
+                            700: 'hsl(280, 35%, 30%)'
+                        },
+                        royal: {
+                            500: 'hsl(45, 70%, 55%)',
+                            600: 'hsl(45, 75%, 45%)'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Cinzel Decorative', 'serif'],
+                        heading: ['Almendra Display', 'serif'],
+                        body: ['Cormorant Garamond', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-stroke {
+            -webkit-text-stroke: 1px currentColor;
+            text-stroke: 1px currentColor;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-shadow-700 min-h-screen font-body text-steel-400 leading-tight tracking-tight">
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="text-center mb-16">
+            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl mb-4 text-royal-500 font-black text-stroke">THE DOOMSPIRE CHRONICLES</h1>
+            <p class="font-heading text-2xl md:text-3xl text-fiery-500 font-bold max-w-3xl mx-auto">A realm of fire and shadow awaits. The Dragon King holds Princess Elara captive in his volcanic fortress.</p>
+            <p class="text-xl mt-2 font-semibold">Will you answer the call?</p>
+            
+            <button id="adventureBtn" class="mt-8 bg-gradient-to-r from-fiery-600 to-fiery-500 hover:from-fiery-500 hover:to-fiery-600 text-white font-heading font-black text-2xl px-8 py-4 rounded-sm border-2 border-royal-500 shadow-lg shadow-fiery-600/30 transition-all hover:scale-105">
+                TAKE UP ARMS
+            </button>
+            
+            <!-- Popup Modal -->
+            <div id="popupModal" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center z-50 px-4">
+                <div class="bg-gradient-to-b from-shadow-700 to-gray-900 border-2 border-royal-500 p-8 max-w-md text-center">
+                    <h3 class="font-heading text-3xl text-royal-500 mb-4">Wait a bit, soldier</h3>
+                    <p class="text-lg mb-6">The magic has begun, the armies have moved. Wait a bit. Your chance to shine will come soon.</p>
+                    <button id="closePopup" class="bg-fiery-500 hover:bg-fiery-600 text-white font-bold py-2 px-6 border border-royal-500">
+                        UNDERSTOOD
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content Sections -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <!-- Magic Section -->
+            <div class="bg-gradient-to-br from-gray-800 to-shadow-600 p-6 border-l-4 border-mystic-500">
+                <h2 class="font-heading text-3xl text-mystic-400 mb-3 font-bold">THE CURSE OF MOUNT DOOM</h2>
+                <p class="text-lg">Ancient magic pulses within the black stones of Mount Doom. The dragon's presence has twisted the very fabric of reality here, creating unstable portals and cursed artifacts.</p>
+            </div>
+            
+            <!-- Dragon Section -->
+            <div class="bg-gradient-to-br from-gray-800 to-fiery-600 p-6 border-l-4 border-fiery-500">
+                <h2 class="font-heading text-3xl text-fiery-500 mb-3 font-bold">VERMITHRAX THE ETERNAL</h2>
+                <p class="text-lg">No ordinary wyrm, this ancient beast wields dark sorcery. His obsidian scales deflect steel, and his breath weapon changes with the phases of the moon.</p>
+            </div>
+            
+            <!-- Weapons Section -->
+            <div class="bg-gradient-to-br from-gray-800 to-steel-500 p-6 border-l-4 border-steel-400">
+                <h2 class="font-heading text-3xl text-steel-400 mb-3 font-bold">ARMORY OF THE ANCIENTS</h2>
+                <p class="text-lg">Choose your weapon wisely: The Moonforged Blade sings against dark magic, Stormcaller arrows strike with thunder, or perhaps the Runehammer of Durin for those who favor brute force.</p>
+            </div>
+            
+            <!-- Princess Section -->
+            <div class="bg-gradient-to-br from-gray-800 to-royal-600 p-6 border-l-4 border-royal-500">
+                <h2 class="font-heading text-3xl text-royal-500 mb-3 font-bold">PRINCESS OF THE SILVER VEIL</h2>
+                <p class="text-lg">Last heir to the Celestial Throne, Elara possesses the Mark of the Starseer - a birthmark that may hold the key to breaking the dragon's curse.</p>
+            </div>
+        </div>
+        
+        <!-- Advice Section -->
+        <div class="mb-16">
+            <h2 class="font-display text-4xl text-center text-royal-500 mb-8 font-black">WISDOM OF THE AGES</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-gray-800 p-4 border-t-4 border-mystic-500">
+                    <p class="text-xl italic mb-2">"Fire fears frost"</p>
+                    <p class="font-bold">Yrris the Wise</p>
+                    <p class="text-sm text-mystic-400">Dragon-slayer</p>
+                </div>
+                <div class="bg-gray-800 p-4 border-t-4 border-fiery-500">
+                    <p class="text-xl italic mb-2">"Magic needs anchors"</p>
+                    <p class="font-bold">Merlin</p>
+                    <p class="text-sm text-fiery-500">Archmage</p>
+                </div>
+                <div class="bg-gray-800 p-4 border-t-4 border-steel-400">
+                    <p class="text-xl italic mb-2">"Watch the shadows"</p>
+                    <p class="font-bold">Nimue</p>
+                    <p class="text-sm text-steel-400">Shadowdancer</p>
+                </div>
+                <div class="bg-gray-800 p-4 border-t-4 border-royal-500">
+                    <p class="text-xl italic mb-2">"Timing beats strength"</p>
+                    <p class="font-bold">Gorim</p>
+                    <p class="text-sm text-royal-500">Kingsguard</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final CTA -->
+        <div class="text-center border-t-2 border-royal-500 pt-12 max-w-3xl mx-auto">
+            <h3 class="font-display text-4xl text-royal-500 mb-4 font-black">YOUR DESTINY AWAITS</h3>
+            <p class="text-xl mb-8">The prophecy speaks of one who will face the trials unbroken. Will your name be etched in legend?</p>
+            <button class="bg-gradient-to-r from-mystic-500 to-mystic-400 hover:from-mystic-400 hover:to-mystic-500 text-white font-heading font-black text-xl px-8 py-3 rounded-sm border-2 border-royal-500 shadow-lg shadow-mystic-500/20 transition-all hover:scale-105">
+                CLAIM YOUR FATE
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('adventureBtn').addEventListener('click', function() {
+            document.getElementById('popupModal').classList.remove('hidden');
+        });
+        
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('popupModal').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
